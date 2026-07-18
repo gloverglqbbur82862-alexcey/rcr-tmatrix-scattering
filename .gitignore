@@ -1,0 +1,45 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Local runtime and temporary files
+*.log
+temp_pos.dat
+tmattemp.dat
+.workbench_remote/
+
+# Local or internal workflow files
+state.yaml
+AGENTS.md
+plans/
+docs/superpowers/
+writing/
+MANIFEST.txt
+README_CODE_MODEL_HANDOFF.md
+git_hash.txt
+
+# Local runner wrappers
+run_tests.bat
+kill_all.bat
+run_nohup.sh
+wsl_config.sh
+
+# Manuscript and presentation build artifacts
+*.aux
+*.bbl
+*.blg
+*.synctex.gz
+*.pptx
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

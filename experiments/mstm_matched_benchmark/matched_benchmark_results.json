@@ -1,0 +1,801 @@
+{
+  "purpose": "same-geometry local matched timing comparison for MSTM and RCR",
+  "parameters": {
+    "aggregate": "BCCA",
+    "seed": 42,
+    "monomer_radius_nm": 25.0,
+    "wavelength_nm": 550.0,
+    "radius_dimless": 0.28559933214452665,
+    "refractive_index": {
+      "real": 1.95,
+      "imag": 0.79
+    },
+    "monomer_order": 3,
+    "solution_epsilon": "1.d-12",
+    "translation_epsilon": "1.d-12",
+    "random_orientation": true,
+    "calculate_scattering_matrix": true,
+    "aggregate_order_policy": "mstm_estimated"
+  },
+  "timing_policy": [
+    "Input-deck generation and aggregate-coordinate generation are excluded from timed values.",
+    "MSTM wall time includes executable startup, input parsing, solve, and output-file writing.",
+    "RCR timed_window_s is measured inside a Python subprocess after a small JIT/library warm-up; it includes solver construction, aggregate T-matrix construction, and orientation averaging.",
+    "RCR process_wall_time_s is retained in raw trials but is not used for the summary table.",
+    "GPU RCR backends are only included when the local Python environment provides CuPy/CUDA.",
+    "Timings are local-machine measurements and must not be mixed with the separate remote GPU benchmark as a same-hardware comparison."
+  ],
+  "environment": {
+    "timestamp_utc": "2026-06-11T17:36:06Z",
+    "platform": "macOS-26.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.3",
+    "git_commit": "668d16d84331f98d20271219f9f4c73ccbf386b6",
+    "gfortran": "GNU Fortran (Homebrew GCC 15.2.0_1) 15.2.0",
+    "mpifort": "GNU Fortran (Homebrew GCC 15.2.0_1) 15.2.0",
+    "mpirun": "mpirun (Open MPI) 5.0.7",
+    "mstm_serial_binary": "/path/to/mstm",
+    "mstm_mpi_binary": "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel"
+  },
+  "summary": {
+    "4": {
+      "mstm_serial": {
+        "count": 2,
+        "median_time_s": 0.039514832955319434,
+        "min_time_s": 0.039050707942806184,
+        "mean_time_s": 0.039514832955319434,
+        "stdev_time_s": 0.0006563718873328207,
+        "median_qext": 0.63154,
+        "min_qext": 0.63154,
+        "max_qext": 0.63154,
+        "failures": 0
+      },
+      "mstm_mpi_np4": {
+        "count": 2,
+        "median_time_s": 0.10864608298288658,
+        "min_time_s": 0.10594091599341482,
+        "mean_time_s": 0.10864608298288658,
+        "stdev_time_s": 0.003825683844994963,
+        "median_qext": 0.63154,
+        "min_qext": 0.63154,
+        "max_qext": 0.63154,
+        "failures": 0
+      },
+      "rcr_direct_cpu_parallel_t8": {
+        "count": 2,
+        "median_time_s": 2.184078854508698,
+        "min_time_s": 2.1737292089965194,
+        "mean_time_s": 2.184078854508698,
+        "stdev_time_s": 0.014636609049076729,
+        "median_qext": 0.6315419684713737,
+        "min_qext": 0.6315419684713737,
+        "max_qext": 0.6315419684713737,
+        "failures": 0
+      }
+    },
+    "8": {
+      "mstm_serial": {
+        "count": 2,
+        "median_time_s": 0.15060222946340218,
+        "min_time_s": 0.1504352919291705,
+        "mean_time_s": 0.15060222946340218,
+        "stdev_time_s": 0.00023608532497958242,
+        "median_qext": 0.86602,
+        "min_qext": 0.86602,
+        "max_qext": 0.86602,
+        "failures": 0
+      },
+      "mstm_mpi_np4": {
+        "count": 2,
+        "median_time_s": 0.14619095844682306,
+        "min_time_s": 0.14530879189260304,
+        "mean_time_s": 0.14619095844682306,
+        "stdev_time_s": 0.0012475719052498938,
+        "median_qext": 0.86602,
+        "min_qext": 0.86602,
+        "max_qext": 0.86602,
+        "failures": 0
+      },
+      "rcr_direct_cpu_parallel_t8": {
+        "count": 2,
+        "median_time_s": 2.298342937545385,
+        "min_time_s": 2.279087792034261,
+        "mean_time_s": 2.298342937545385,
+        "stdev_time_s": 0.027230887927299382,
+        "median_qext": 0.8660198540178731,
+        "min_qext": 0.8660198540178731,
+        "max_qext": 0.8660198540178731,
+        "failures": 0
+      }
+    },
+    "16": {
+      "mstm_serial": {
+        "count": 2,
+        "median_time_s": 0.8523492499953136,
+        "min_time_s": 0.8462243329267949,
+        "mean_time_s": 0.8523492499953136,
+        "stdev_time_s": 0.008661940786709602,
+        "median_qext": 1.1605,
+        "min_qext": 1.1605,
+        "max_qext": 1.1605,
+        "failures": 0
+      },
+      "mstm_mpi_np4": {
+        "count": 2,
+        "median_time_s": 0.3745066039846279,
+        "min_time_s": 0.37383470800705254,
+        "mean_time_s": 0.3745066039846279,
+        "stdev_time_s": 0.0009502044039909634,
+        "median_qext": 1.1605,
+        "min_qext": 1.1605,
+        "max_qext": 1.1605,
+        "failures": 0
+      },
+      "rcr_direct_cpu_parallel_t8": {
+        "count": 2,
+        "median_time_s": 2.5583549165166914,
+        "min_time_s": 2.5485925000393763,
+        "mean_time_s": 2.5583549165166914,
+        "stdev_time_s": 0.013806141783753629,
+        "median_qext": 1.160510994694235,
+        "min_qext": 1.160510994694235,
+        "max_qext": 1.160510994694235,
+        "failures": 0
+      }
+    },
+    "32": {
+      "mstm_serial": {
+        "count": 2,
+        "median_time_s": 5.930407937441487,
+        "min_time_s": 5.850857499986887,
+        "mean_time_s": 5.930407937441487,
+        "stdev_time_s": 0.11250130754100779,
+        "median_qext": 1.485,
+        "min_qext": 1.485,
+        "max_qext": 1.485,
+        "failures": 0
+      },
+      "mstm_mpi_np4": {
+        "count": 2,
+        "median_time_s": 1.9386663329787552,
+        "min_time_s": 1.9220379160251468,
+        "mean_time_s": 1.9386663329787552,
+        "stdev_time_s": 0.023516132776587696,
+        "median_qext": 1.485,
+        "min_qext": 1.485,
+        "max_qext": 1.485,
+        "failures": 0
+      },
+      "rcr_direct_cpu_parallel_t8": {
+        "count": 2,
+        "median_time_s": 4.545508207986131,
+        "min_time_s": 4.542538832989521,
+        "mean_time_s": 4.545508207986131,
+        "stdev_time_s": 0.004199330391977405,
+        "median_qext": 1.4849924393623173,
+        "min_qext": 1.4849924393623173,
+        "max_qext": 1.4849924393623173,
+        "failures": 0
+      }
+    }
+  },
+  "aggregate_orders_by_n": {
+    "4": {
+      "rcr_auto": 8,
+      "mstm_estimated_values": [
+        9
+      ],
+      "used_for_rcr": 9,
+      "policy": "mstm_estimated"
+    },
+    "8": {
+      "rcr_auto": 8,
+      "mstm_estimated_values": [
+        10
+      ],
+      "used_for_rcr": 10,
+      "policy": "mstm_estimated"
+    },
+    "16": {
+      "rcr_auto": 9,
+      "mstm_estimated_values": [
+        11
+      ],
+      "used_for_rcr": 11,
+      "policy": "mstm_estimated"
+    },
+    "32": {
+      "rcr_auto": 12,
+      "mstm_estimated_values": [
+        14
+      ],
+      "used_for_rcr": 14,
+      "policy": "mstm_estimated"
+    }
+  },
+  "trials": [
+    {
+      "solver": "mstm_serial",
+      "n": 4,
+      "rep": 1,
+      "command": [
+        "/path/to/mstm",
+        "inputs/mstm_serial_bcca_n4_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_serial_bcca_n4_w550_seed42_rep1.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_serial_bcca_n4_w550_seed42_rep1.out",
+      "wall_time_s": 0.039050707942806184,
+      "returncode": 0,
+      "stdout_tail": "  0.380  -0.576  -0.376  1.9500E+00  7.9000E-01\n       4       0       0   0.286   0.366  -1.067  -0.085  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n     9\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       120\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1    9  0.60281E+00  0.56010E+00  0.60281E+00    0.00    0.08 sec\n   2    9  0.63082E+00  0.58790E+00  0.28011E-01    0.00    0.08 sec\n   3    9  0.63153E+00  0.58860E+00  0.71513E-03    0.00    0.07 sec\n   4    9  0.63154E+00  0.58861E+00  0.10114E-04    0.00    0.07 sec\n   5    9  0.63154E+00  0.58861E+00  0.93593E-07    0.00    0.06 sec\n t matrix ext, sca:  0.63154E+00  0.42934E-01\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:   121.00\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 0.63154,
+        "qabs": 0.58861,
+        "qsca": 0.042934,
+        "estimated_t_matrix_order": 9,
+        "t_matrix_order": 5
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_serial",
+      "n": 4,
+      "rep": 2,
+      "command": [
+        "/path/to/mstm",
+        "inputs/mstm_serial_bcca_n4_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_serial_bcca_n4_w550_seed42_rep2.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_serial_bcca_n4_w550_seed42_rep2.out",
+      "wall_time_s": 0.039978957967832685,
+      "returncode": 0,
+      "stdout_tail": "  0.380  -0.576  -0.376  1.9500E+00  7.9000E-01\n       4       0       0   0.286   0.366  -1.067  -0.085  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n     9\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       120\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1    9  0.60281E+00  0.56010E+00  0.60281E+00    0.00    0.09 sec\n   2    9  0.63082E+00  0.58790E+00  0.28011E-01    0.00    0.08 sec\n   3    9  0.63153E+00  0.58860E+00  0.71513E-03    0.00    0.07 sec\n   4    9  0.63154E+00  0.58861E+00  0.10114E-04    0.00    0.07 sec\n   5    9  0.63154E+00  0.58861E+00  0.93593E-07    0.00    0.06 sec\n t matrix ext, sca:  0.63154E+00  0.42934E-01\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:   121.00\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 0.63154,
+        "qabs": 0.58861,
+        "qsca": 0.042934,
+        "estimated_t_matrix_order": 9,
+        "t_matrix_order": 5
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_mpi_np4",
+      "n": 4,
+      "rep": 1,
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel",
+        "inputs/mstm_mpi_np4_bcca_n4_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_mpi_np4_bcca_n4_w550_seed42_rep1.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_mpi_np4_bcca_n4_w550_seed42_rep1.out",
+      "wall_time_s": 0.10594091599341482,
+      "returncode": 0,
+      "stdout_tail": "  0.380  -0.576  -0.376  1.9500E+00  7.9000E-01\n       4       0       0   0.286   0.366  -1.067  -0.085  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n     9\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       120\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1    9  0.60281E+00  0.56010E+00  0.60281E+00    0.00    0.10 sec\n   2    9  0.63082E+00  0.58790E+00  0.28011E-01    0.00    0.04 sec\n   3    9  0.63153E+00  0.58860E+00  0.71513E-03    0.00    0.04 sec\n   4    9  0.63154E+00  0.58861E+00  0.10114E-04    0.00    0.03 sec\n   5    9  0.63154E+00  0.58861E+00  0.93593E-07    0.00    0.03 sec\n t matrix ext, sca:  0.63154E+00  0.42934E-01\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:    30.25\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 0.63154,
+        "qabs": 0.58861,
+        "qsca": 0.042934,
+        "estimated_t_matrix_order": 9,
+        "t_matrix_order": 5
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_mpi_np4",
+      "n": 4,
+      "rep": 2,
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel",
+        "inputs/mstm_mpi_np4_bcca_n4_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_mpi_np4_bcca_n4_w550_seed42_rep2.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_mpi_np4_bcca_n4_w550_seed42_rep2.out",
+      "wall_time_s": 0.11135124997235835,
+      "returncode": 0,
+      "stdout_tail": "  0.380  -0.576  -0.376  1.9500E+00  7.9000E-01\n       4       0       0   0.286   0.366  -1.067  -0.085  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n     9\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       120\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1    9  0.60281E+00  0.56010E+00  0.60281E+00    0.00    0.08 sec\n   2    9  0.63082E+00  0.58790E+00  0.28011E-01    0.00    0.04 sec\n   3    9  0.63153E+00  0.58860E+00  0.71513E-03    0.00    0.05 sec\n   4    9  0.63154E+00  0.58861E+00  0.10114E-04    0.00    0.04 sec\n   5    9  0.63154E+00  0.58861E+00  0.93593E-07    0.00    0.04 sec\n t matrix ext, sca:  0.63154E+00  0.42934E-01\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:    30.25\n d matrix time:     0.01 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 0.63154,
+        "qabs": 0.58861,
+        "qsca": 0.042934,
+        "estimated_t_matrix_order": 9,
+        "t_matrix_order": 5
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t8",
+      "n": 4,
+      "rep": 1,
+      "backend": "direct_cpu_parallel",
+      "threads": 8,
+      "aggregate_order": 9,
+      "process_wall_time_s": 11.563912582932971,
+      "timed_window_s": 2.1737292089965194,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.08852332952902811, \"profile_data\": {\"orientation_time\": 0.00867125007789582}, \"qabs\": 0.5886075084505593, \"qext\": 0.6315419684713737, \"qsca\": 0.04293446002081432, \"wall_time_s\": 2.1737292089965194}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.08852332952902811,
+        "profile_data": {
+          "orientation_time": 0.00867125007789582
+        },
+        "qabs": 0.5886075084505593,
+        "qext": 0.6315419684713737,
+        "qsca": 0.04293446002081432,
+        "wall_time_s": 2.1737292089965194
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t8",
+      "n": 4,
+      "rep": 2,
+      "backend": "direct_cpu_parallel",
+      "threads": 8,
+      "aggregate_order": 9,
+      "process_wall_time_s": 11.539529166999273,
+      "timed_window_s": 2.1944285000208765,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.08852332952902811, \"profile_data\": {\"orientation_time\": 0.008306208997964859}, \"qabs\": 0.5886075084505593, \"qext\": 0.6315419684713737, \"qsca\": 0.04293446002081432, \"wall_time_s\": 2.1944285000208765}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.08852332952902811,
+        "profile_data": {
+          "orientation_time": 0.008306208997964859
+        },
+        "qabs": 0.5886075084505593,
+        "qext": 0.6315419684713737,
+        "qsca": 0.04293446002081432,
+        "wall_time_s": 2.1944285000208765
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_serial",
+      "n": 8,
+      "rep": 1,
+      "command": [
+        "/path/to/mstm",
+        "inputs/mstm_serial_bcca_n8_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_serial_bcca_n8_w550_seed42_rep1.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_serial_bcca_n8_w550_seed42_rep1.out",
+      "wall_time_s": 0.1504352919291705,
+      "returncode": 0,
+      "stdout_tail": " -0.716  -1.199  -0.467  1.9500E+00  7.9000E-01\n       8       0       0   0.286  -0.625  -0.647  -0.583  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n    10\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       240\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   10  0.80889E+00  0.71158E+00  0.80889E+00    0.00    0.48 sec\n   2   11  0.86393E+00  0.76589E+00  0.55043E-01    0.00    0.48 sec\n   3   11  0.86597E+00  0.76788E+00  0.20375E-02    0.00    0.42 sec\n   4   11  0.86602E+00  0.76793E+00  0.46282E-04    0.00    0.38 sec\n   5   11  0.86602E+00  0.76793E+00  0.70443E-06    0.00    0.35 sec\n t matrix ext, sca:  0.86602E+00  0.98093E-01\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:   121.00\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 0.86602,
+        "qabs": 0.76793,
+        "qsca": 0.098093,
+        "estimated_t_matrix_order": 10,
+        "t_matrix_order": 5
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_serial",
+      "n": 8,
+      "rep": 2,
+      "command": [
+        "/path/to/mstm",
+        "inputs/mstm_serial_bcca_n8_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_serial_bcca_n8_w550_seed42_rep2.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_serial_bcca_n8_w550_seed42_rep2.out",
+      "wall_time_s": 0.15076916699763387,
+      "returncode": 0,
+      "stdout_tail": " -0.716  -1.199  -0.467  1.9500E+00  7.9000E-01\n       8       0       0   0.286  -0.625  -0.647  -0.583  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n    10\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       240\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   10  0.80889E+00  0.71158E+00  0.80889E+00    0.00    0.48 sec\n   2   11  0.86393E+00  0.76589E+00  0.55043E-01    0.00    0.48 sec\n   3   11  0.86597E+00  0.76788E+00  0.20375E-02    0.00    0.43 sec\n   4   11  0.86602E+00  0.76793E+00  0.46282E-04    0.00    0.39 sec\n   5   11  0.86602E+00  0.76793E+00  0.70443E-06    0.00    0.35 sec\n t matrix ext, sca:  0.86602E+00  0.98093E-01\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:   121.00\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 0.86602,
+        "qabs": 0.76793,
+        "qsca": 0.098093,
+        "estimated_t_matrix_order": 10,
+        "t_matrix_order": 5
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_mpi_np4",
+      "n": 8,
+      "rep": 1,
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel",
+        "inputs/mstm_mpi_np4_bcca_n8_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_mpi_np4_bcca_n8_w550_seed42_rep1.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_mpi_np4_bcca_n8_w550_seed42_rep1.out",
+      "wall_time_s": 0.14530879189260304,
+      "returncode": 0,
+      "stdout_tail": " -0.716  -1.199  -0.467  1.9500E+00  7.9000E-01\n       8       0       0   0.286  -0.625  -0.647  -0.583  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n    10\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       240\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   10  0.80889E+00  0.71158E+00  0.80889E+00    0.00    0.29 sec\n   2   11  0.86393E+00  0.76589E+00  0.55043E-01    0.00    0.17 sec\n   3   11  0.86597E+00  0.76788E+00  0.20375E-02    0.00    0.16 sec\n   4   11  0.86602E+00  0.76793E+00  0.46282E-04    0.00    0.15 sec\n   5   11  0.86602E+00  0.76793E+00  0.70443E-06    0.00    0.13 sec\n t matrix ext, sca:  0.86602E+00  0.98093E-01\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:    30.25\n d matrix time:     0.01 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 0.86602,
+        "qabs": 0.76793,
+        "qsca": 0.098093,
+        "estimated_t_matrix_order": 10,
+        "t_matrix_order": 5
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_mpi_np4",
+      "n": 8,
+      "rep": 2,
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel",
+        "inputs/mstm_mpi_np4_bcca_n8_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_mpi_np4_bcca_n8_w550_seed42_rep2.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_mpi_np4_bcca_n8_w550_seed42_rep2.out",
+      "wall_time_s": 0.14707312500104308,
+      "returncode": 0,
+      "stdout_tail": " -0.716  -1.199  -0.467  1.9500E+00  7.9000E-01\n       8       0       0   0.286  -0.625  -0.647  -0.583  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n    10\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       240\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   10  0.80889E+00  0.71158E+00  0.80889E+00    0.00    0.25 sec\n   2   11  0.86393E+00  0.76589E+00  0.55043E-01    0.00    0.17 sec\n   3   11  0.86597E+00  0.76788E+00  0.20375E-02    0.00    0.15 sec\n   4   11  0.86602E+00  0.76793E+00  0.46282E-04    0.00    0.14 sec\n   5   11  0.86602E+00  0.76793E+00  0.70443E-06    0.00    0.13 sec\n t matrix ext, sca:  0.86602E+00  0.98093E-01\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:    30.25\n d matrix time:     0.01 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 0.86602,
+        "qabs": 0.76793,
+        "qsca": 0.098093,
+        "estimated_t_matrix_order": 10,
+        "t_matrix_order": 5
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t8",
+      "n": 8,
+      "rep": 1,
+      "backend": "direct_cpu_parallel",
+      "threads": 8,
+      "aggregate_order": 10,
+      "process_wall_time_s": 11.809231500024907,
+      "timed_window_s": 2.3175980830565095,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.14131325943084863, \"profile_data\": {\"orientation_time\": 0.012644958915188909}, \"qabs\": 0.767926946910608, \"qext\": 0.8660198540178731, \"qsca\": 0.09809290710726504, \"wall_time_s\": 2.3175980830565095}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.14131325943084863,
+        "profile_data": {
+          "orientation_time": 0.012644958915188909
+        },
+        "qabs": 0.767926946910608,
+        "qext": 0.8660198540178731,
+        "qsca": 0.09809290710726504,
+        "wall_time_s": 2.3175980830565095
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t8",
+      "n": 8,
+      "rep": 2,
+      "backend": "direct_cpu_parallel",
+      "threads": 8,
+      "aggregate_order": 10,
+      "process_wall_time_s": 11.721841708058491,
+      "timed_window_s": 2.279087792034261,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.14131325943084863, \"profile_data\": {\"orientation_time\": 0.012162458035163581}, \"qabs\": 0.767926946910608, \"qext\": 0.8660198540178731, \"qsca\": 0.09809290710726504, \"wall_time_s\": 2.279087792034261}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.14131325943084863,
+        "profile_data": {
+          "orientation_time": 0.012162458035163581
+        },
+        "qabs": 0.767926946910608,
+        "qext": 0.8660198540178731,
+        "qsca": 0.09809290710726504,
+        "wall_time_s": 2.279087792034261
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_serial",
+      "n": 16,
+      "rep": 1,
+      "command": [
+        "/path/to/mstm",
+        "inputs/mstm_serial_bcca_n16_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_serial_bcca_n16_w550_seed42_rep1.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_serial_bcca_n16_w550_seed42_rep1.out",
+      "wall_time_s": 0.8584741670638323,
+      "returncode": 0,
+      "stdout_tail": "  0   0.286   0.189  -0.794  -0.518  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n    11\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       480\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   10  0.10117E+01  0.82864E+00  0.10117E+01    0.01    2.45 sec\n   2   11  0.11511E+01  0.96253E+00  0.13937E+00    0.01    2.46 sec\n   3   11  0.11602E+01  0.97123E+00  0.90642E-02    0.01    2.27 sec\n   4   11  0.11605E+01  0.97157E+00  0.34703E-03    0.01    2.09 sec\n   5   11  0.11605E+01  0.97158E+00  0.88851E-05    0.01    1.89 sec\n   6   11  0.11605E+01  0.97158E+00  0.16227E-06    0.01    1.69 sec\n t matrix ext, sca:  0.11605E+01  0.18893E+00\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:   169.00\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 1.1605,
+        "qabs": 0.97158,
+        "qsca": 0.18893,
+        "estimated_t_matrix_order": 11,
+        "t_matrix_order": 6
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_serial",
+      "n": 16,
+      "rep": 2,
+      "command": [
+        "/path/to/mstm",
+        "inputs/mstm_serial_bcca_n16_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_serial_bcca_n16_w550_seed42_rep2.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_serial_bcca_n16_w550_seed42_rep2.out",
+      "wall_time_s": 0.8462243329267949,
+      "returncode": 0,
+      "stdout_tail": "  0   0.286   0.189  -0.794  -0.518  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n    11\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       480\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   10  0.10117E+01  0.82864E+00  0.10117E+01    0.01    2.42 sec\n   2   11  0.11511E+01  0.96253E+00  0.13937E+00    0.01    2.45 sec\n   3   11  0.11602E+01  0.97123E+00  0.90642E-02    0.01    2.19 sec\n   4   11  0.11605E+01  0.97157E+00  0.34703E-03    0.01    2.04 sec\n   5   11  0.11605E+01  0.97158E+00  0.88851E-05    0.01    1.88 sec\n   6   11  0.11605E+01  0.97158E+00  0.16227E-06    0.01    1.68 sec\n t matrix ext, sca:  0.11605E+01  0.18893E+00\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:   169.00\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 1.1605,
+        "qabs": 0.97158,
+        "qsca": 0.18893,
+        "estimated_t_matrix_order": 11,
+        "t_matrix_order": 6
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_mpi_np4",
+      "n": 16,
+      "rep": 1,
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel",
+        "inputs/mstm_mpi_np4_bcca_n16_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_mpi_np4_bcca_n16_w550_seed42_rep1.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_mpi_np4_bcca_n16_w550_seed42_rep1.out",
+      "wall_time_s": 0.37383470800705254,
+      "returncode": 0,
+      "stdout_tail": "  0   0.286   0.189  -0.794  -0.518  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n    11\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       480\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   10  0.10117E+01  0.82864E+00  0.10117E+01    0.00    0.90 sec\n   2   11  0.11511E+01  0.96253E+00  0.13937E+00    0.00    0.80 sec\n   3   11  0.11602E+01  0.97123E+00  0.90642E-02    0.00    0.73 sec\n   4   11  0.11605E+01  0.97157E+00  0.34703E-03    0.00    0.68 sec\n   5   11  0.11605E+01  0.97158E+00  0.88851E-05    0.00    0.62 sec\n   6   11  0.11605E+01  0.97158E+00  0.16227E-06    0.00    0.55 sec\n t matrix ext, sca:  0.11605E+01  0.18893E+00\n t matrix read time:     0.01 sec\n d matrix calculation, order+degree per proc.:    42.25\n d matrix time:     0.01 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 1.1605,
+        "qabs": 0.97158,
+        "qsca": 0.18893,
+        "estimated_t_matrix_order": 11,
+        "t_matrix_order": 6
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_mpi_np4",
+      "n": 16,
+      "rep": 2,
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel",
+        "inputs/mstm_mpi_np4_bcca_n16_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_mpi_np4_bcca_n16_w550_seed42_rep2.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_mpi_np4_bcca_n16_w550_seed42_rep2.out",
+      "wall_time_s": 0.3751784999622032,
+      "returncode": 0,
+      "stdout_tail": "  0   0.286   0.189  -0.794  -0.518  1.9500E+00  7.9000E-01\n random orientation, estimated t matrix order:\n    11\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       480\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   10  0.10117E+01  0.82864E+00  0.10117E+01    0.00    0.90 sec\n   2   11  0.11511E+01  0.96253E+00  0.13937E+00    0.00    0.81 sec\n   3   11  0.11602E+01  0.97123E+00  0.90642E-02    0.00    0.73 sec\n   4   11  0.11605E+01  0.97157E+00  0.34703E-03    0.00    0.69 sec\n   5   11  0.11605E+01  0.97158E+00  0.88851E-05    0.00    0.62 sec\n   6   11  0.11605E+01  0.97158E+00  0.16227E-06    0.00    0.56 sec\n t matrix ext, sca:  0.11605E+01  0.18893E+00\n t matrix read time:     0.01 sec\n d matrix calculation, order+degree per proc.:    42.25\n d matrix time:     0.01 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 1.1605,
+        "qabs": 0.97158,
+        "qsca": 0.18893,
+        "estimated_t_matrix_order": 11,
+        "t_matrix_order": 6
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t8",
+      "n": 16,
+      "rep": 1,
+      "backend": "direct_cpu_parallel",
+      "threads": 8,
+      "aggregate_order": 11,
+      "process_wall_time_s": 11.975928250001743,
+      "timed_window_s": 2.5681173329940066,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.268584472995751, \"profile_data\": {\"orientation_time\": 0.0164747079834342}, \"qabs\": 0.9715830892257102, \"qext\": 1.160510994694235, \"qsca\": 0.18892790546852464, \"wall_time_s\": 2.5681173329940066}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.268584472995751,
+        "profile_data": {
+          "orientation_time": 0.0164747079834342
+        },
+        "qabs": 0.9715830892257102,
+        "qext": 1.160510994694235,
+        "qsca": 0.18892790546852464,
+        "wall_time_s": 2.5681173329940066
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t8",
+      "n": 16,
+      "rep": 2,
+      "backend": "direct_cpu_parallel",
+      "threads": 8,
+      "aggregate_order": 11,
+      "process_wall_time_s": 12.526569374953397,
+      "timed_window_s": 2.5485925000393763,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.268584472995751, \"profile_data\": {\"orientation_time\": 0.017301166895776987}, \"qabs\": 0.9715830892257102, \"qext\": 1.160510994694235, \"qsca\": 0.18892790546852464, \"wall_time_s\": 2.5485925000393763}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.268584472995751,
+        "profile_data": {
+          "orientation_time": 0.017301166895776987
+        },
+        "qabs": 0.9715830892257102,
+        "qext": 1.160510994694235,
+        "qsca": 0.18892790546852464,
+        "wall_time_s": 2.5485925000393763
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_serial",
+      "n": 32,
+      "rep": 1,
+      "command": [
+        "/path/to/mstm",
+        "inputs/mstm_serial_bcca_n32_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_serial_bcca_n32_w550_seed42_rep1.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_serial_bcca_n32_w550_seed42_rep1.out",
+      "wall_time_s": 5.850857499986887,
+      "returncode": 0,
+      "stdout_tail": "x\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       960\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   11  0.85657E+00  0.67102E+00  0.85657E+00    0.04   16.38 sec\n   2   11  0.13224E+01  0.10650E+01  0.46587E+00    0.04   15.55 sec\n   3   11  0.14571E+01  0.11838E+01  0.13466E+00    0.04   15.60 sec\n   4   12  0.14819E+01  0.12058E+01  0.24761E-01    0.04   14.81 sec\n   5   12  0.14847E+01  0.12085E+01  0.28825E-02    0.04   13.92 sec\n   6   12  0.14850E+01  0.12088E+01  0.23753E-03    0.04   12.84 sec\n   7   12  0.14850E+01  0.12088E+01  0.14514E-04    0.04   11.53 sec\n   8   12  0.14850E+01  0.12088E+01  0.67623E-06    0.04   10.38 sec\n t matrix ext, sca:  0.14850E+01  0.27622E+00\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:   289.00\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 1.485,
+        "qabs": 1.2088,
+        "qsca": 0.27622,
+        "estimated_t_matrix_order": 14,
+        "t_matrix_order": 8
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_serial",
+      "n": 32,
+      "rep": 2,
+      "command": [
+        "/path/to/mstm",
+        "inputs/mstm_serial_bcca_n32_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_serial_bcca_n32_w550_seed42_rep2.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_serial_bcca_n32_w550_seed42_rep2.out",
+      "wall_time_s": 6.009958374896087,
+      "returncode": 0,
+      "stdout_tail": "x\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       960\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   11  0.85657E+00  0.67102E+00  0.85657E+00    0.04   16.48 sec\n   2   11  0.13224E+01  0.10650E+01  0.46587E+00    0.04   15.63 sec\n   3   11  0.14571E+01  0.11838E+01  0.13466E+00    0.04   15.80 sec\n   4   12  0.14819E+01  0.12058E+01  0.24761E-01    0.04   14.91 sec\n   5   12  0.14847E+01  0.12085E+01  0.28825E-02    0.04   14.73 sec\n   6   12  0.14850E+01  0.12088E+01  0.23753E-03    0.04   13.15 sec\n   7   12  0.14850E+01  0.12088E+01  0.14514E-04    0.04   11.77 sec\n   8   12  0.14850E+01  0.12088E+01  0.67623E-06    0.04   10.78 sec\n t matrix ext, sca:  0.14850E+01  0.27622E+00\n t matrix read time:     0.00 sec\n d matrix calculation, order+degree per proc.:   289.00\n d matrix time:     0.00 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 1.485,
+        "qabs": 1.2088,
+        "qsca": 0.27622,
+        "estimated_t_matrix_order": 14,
+        "t_matrix_order": 8
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_mpi_np4",
+      "n": 32,
+      "rep": 1,
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel",
+        "inputs/mstm_mpi_np4_bcca_n32_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_mpi_np4_bcca_n32_w550_seed42_rep1.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_mpi_np4_bcca_n32_w550_seed42_rep1.out",
+      "wall_time_s": 1.9552947499323636,
+      "returncode": 0,
+      "stdout_tail": "x\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       960\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   11  0.85657E+00  0.67102E+00  0.85657E+00    0.01    5.09 sec\n   2   11  0.13224E+01  0.10650E+01  0.46587E+00    0.01    4.86 sec\n   3   11  0.14571E+01  0.11838E+01  0.13466E+00    0.01    4.82 sec\n   4   12  0.14819E+01  0.12058E+01  0.24761E-01    0.01    4.68 sec\n   5   12  0.14847E+01  0.12085E+01  0.28825E-02    0.01    4.42 sec\n   6   12  0.14850E+01  0.12088E+01  0.23753E-03    0.01    4.13 sec\n   7   12  0.14850E+01  0.12088E+01  0.14514E-04    0.01    3.68 sec\n   8   12  0.14850E+01  0.12088E+01  0.67623E-06    0.01    3.29 sec\n t matrix ext, sca:  0.14850E+01  0.27622E+00\n t matrix read time:     0.02 sec\n d matrix calculation, order+degree per proc.:    72.25\n d matrix time:     0.01 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 1.485,
+        "qabs": 1.2088,
+        "qsca": 0.27622,
+        "estimated_t_matrix_order": 14,
+        "t_matrix_order": 8
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_mpi_np4",
+      "n": 32,
+      "rep": 2,
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "/path/to/fast_mtp_rcr_scattering/experiments/mstm_matched_benchmark/build_mstm_parallel/mstm_parallel",
+        "inputs/mstm_mpi_np4_bcca_n32_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments/mstm_matched_benchmark/inputs/mstm_mpi_np4_bcca_n32_w550_seed42_rep2.inp",
+      "output": "experiments/mstm_matched_benchmark/outputs/mstm_mpi_np4_bcca_n32_w550_seed42_rep2.out",
+      "wall_time_s": 1.9220379160251468,
+      "returncode": 0,
+      "stdout_tail": "x\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3       960\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   11  0.85657E+00  0.67102E+00  0.85657E+00    0.01    5.14 sec\n   2   11  0.13224E+01  0.10650E+01  0.46587E+00    0.01    4.80 sec\n   3   11  0.14571E+01  0.11838E+01  0.13466E+00    0.01    4.83 sec\n   4   12  0.14819E+01  0.12058E+01  0.24761E-01    0.01    4.57 sec\n   5   12  0.14847E+01  0.12085E+01  0.28825E-02    0.01    4.30 sec\n   6   12  0.14850E+01  0.12088E+01  0.23753E-03    0.01    4.03 sec\n   7   12  0.14850E+01  0.12088E+01  0.14514E-04    0.01    3.64 sec\n   8   12  0.14850E+01  0.12088E+01  0.67623E-06    0.01    3.27 sec\n t matrix ext, sca:  0.14850E+01  0.27622E+00\n t matrix read time:     0.02 sec\n d matrix calculation, order+degree per proc.:    72.25\n d matrix time:     0.01 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 1.485,
+        "qabs": 1.2088,
+        "qsca": 0.27622,
+        "estimated_t_matrix_order": 14,
+        "t_matrix_order": 8
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t8",
+      "n": 32,
+      "rep": 1,
+      "backend": "direct_cpu_parallel",
+      "threads": 8,
+      "aggregate_order": 14,
+      "process_wall_time_s": 13.948217374971136,
+      "timed_window_s": 4.548477582982741,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.36411575588098544, \"profile_data\": {\"orientation_time\": 0.03311462502460927}, \"qabs\": 1.208771017988699, \"qext\": 1.4849924393623173, \"qsca\": 0.2762214213736184, \"wall_time_s\": 4.548477582982741}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.36411575588098544,
+        "profile_data": {
+          "orientation_time": 0.03311462502460927
+        },
+        "qabs": 1.208771017988699,
+        "qext": 1.4849924393623173,
+        "qsca": 0.2762214213736184,
+        "wall_time_s": 4.548477582982741
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t8",
+      "n": 32,
+      "rep": 2,
+      "backend": "direct_cpu_parallel",
+      "threads": 8,
+      "aggregate_order": 14,
+      "process_wall_time_s": 13.997231833986007,
+      "timed_window_s": 4.542538832989521,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.36411575588098544, \"profile_data\": {\"orientation_time\": 0.0317194580566138}, \"qabs\": 1.208771017988699, \"qext\": 1.4849924393623173, \"qsca\": 0.2762214213736184, \"wall_time_s\": 4.542538832989521}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.36411575588098544,
+        "profile_data": {
+          "orientation_time": 0.0317194580566138
+        },
+        "qabs": 1.208771017988699,
+        "qext": 1.4849924393623173,
+        "qsca": 0.2762214213736184,
+        "wall_time_s": 4.542538832989521
+      },
+      "status": "success"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+    "os": {
+        "system": "Darwin",
+        "release": "25.2.0",
+        "version": "Darwin Kernel Version 25.2.0: Tue Nov 18 21:09:56 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T6041",
+        "machine": "arm64"
+    },
+    "cpu": {
+        "model": "Apple M4 Max",
+        "physical_cores": 16,
+        "logical_cores": 16,
+        "ram_gb": 128.0
+    },
+    "software": {
+        "python_version": "3.13.3",
+        "numpy_version": "2.4.6",
+        "scipy_version": "1.17.1",
+        "numba_version": "0.65.1"
+    },
+    "cuda": {
+        "cuda_available": false,
+        "numba_cuda_available": false,
+        "cupy_available": false,
+        "cupy_device_info": "CuPy Not Installed",
+        "gpus": []
+    }
+}

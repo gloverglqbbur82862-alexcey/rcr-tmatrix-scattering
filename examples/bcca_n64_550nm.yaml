@@ -1,0 +1,14 @@
+geometry:
+  kind: "bcca"
+  N: 64
+  monomer_radius_nm: 25.0
+  seed: 42
+optics:
+  wavelength_nm: 550.0
+  refractive_index_real: 1.95
+  refractive_index_imag: 0.79
+solver:
+  realization: "cpu_parallel"
+  sphere_order: 3
+  aggregate_order: 6
+  demo_mode: false

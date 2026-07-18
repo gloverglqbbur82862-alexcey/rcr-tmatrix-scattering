@@ -1,0 +1,530 @@
+{
+    "128": {
+        "3": {
+            "direct_cpu_serial": {
+                "status": "Success",
+                "init_time": 0.21869709994643927,
+                "warmup_time": 0.04121270030736923,
+                "matvec_time": 0.040817260183393954,
+                "peak_memory_mb": 569.32421875,
+                "rel_error": 0.0,
+                "speedup": 1.0
+            },
+            "direct_cpu_parallel": {
+                "status": "Success",
+                "init_time": 0.22128779999911785,
+                "warmup_time": 0.005308499559760094,
+                "matvec_time": 0.005439440160989762,
+                "peak_memory_mb": 573.25,
+                "rel_error": 0.0,
+                "speedup": 7.503945070693973
+            },
+            "fmm_cpu_serial": {
+                "status": "Success",
+                "init_time": 1.7443268997594714,
+                "warmup_time": 5.452179700136185,
+                "matvec_time": 0.3980858402326703,
+                "peak_memory_mb": 683.41796875,
+                "rel_error": 8.147769950203205e-12,
+                "speedup": 0.10253381572059278
+            },
+            "direct_gpu": {
+                "status": "Success",
+                "init_time": 1.1334988996386528,
+                "warmup_time": 0.06954169925302267,
+                "matvec_time": 0.018167000077664853,
+                "peak_memory_mb": 718.19140625,
+                "rel_error": 2.6247339782725987e-16,
+                "speedup": 2.2467804265370224
+            },
+            "direct_gpu_dense": {
+                "status": "Success",
+                "init_time": 3.4751153998076916,
+                "warmup_time": 0.09102639928460121,
+                "matvec_time": 0.0006545798853039742,
+                "peak_memory_mb": 1056.91015625,
+                "rel_error": 4.931017837148248e-16,
+                "speedup": 62.3564229512479
+            },
+            "fmm_gpu": {
+                "status": "Success",
+                "init_time": 1.8435518005862832,
+                "warmup_time": 0.39954710006713867,
+                "matvec_time": 0.4025257596746087,
+                "peak_memory_mb": 1150.33203125,
+                "rel_error": 8.147769950203205e-12,
+                "speedup": 0.10140285236996897
+            },
+            "auto": {
+                "status": "Success",
+                "init_time": 1.709272300824523,
+                "warmup_time": 0.3958187000826001,
+                "matvec_time": 0.39694156013429166,
+                "peak_memory_mb": 1155.0078125,
+                "rel_error": 8.147769950203205e-12,
+                "speedup": 0.10282939425537811
+            }
+        },
+        "5": {
+            "direct_cpu_serial": {
+                "status": "Success",
+                "init_time": 0.3439637999981642,
+                "warmup_time": 0.12631170079112053,
+                "matvec_time": 0.12644066009670496,
+                "peak_memory_mb": 1093.5703125,
+                "rel_error": 0.0,
+                "speedup": 1.0
+            },
+            "direct_cpu_parallel": {
+                "status": "Success",
+                "init_time": 0.34005240071564913,
+                "warmup_time": 0.011599100194871426,
+                "matvec_time": 0.013658799789845943,
+                "peak_memory_mb": 1093.60546875,
+                "rel_error": 0.0,
+                "speedup": 9.2570842271736
+            },
+            "fmm_cpu_serial": {
+                "status": "Success",
+                "init_time": 1.8200099999085069,
+                "warmup_time": 0.4535595001652837,
+                "matvec_time": 0.45110355988144873,
+                "peak_memory_mb": 1173.65625,
+                "rel_error": 1.0078369495801273e-13,
+                "speedup": 0.2802918694100617
+            },
+            "direct_gpu": {
+                "status": "Success",
+                "init_time": 0.6132001001387835,
+                "warmup_time": 0.34855120070278645,
+                "matvec_time": 0.06522785983979702,
+                "peak_memory_mb": 1166.33203125,
+                "rel_error": 3.116053590486577e-16,
+                "speedup": 1.938445633618054
+            },
+            "direct_gpu_dense": {
+                "status": "Success",
+                "init_time": 1.9091642992570996,
+                "warmup_time": 0.007370800711214542,
+                "matvec_time": 0.006637579947710037,
+                "peak_memory_mb": 3214.3515625,
+                "rel_error": 5.099488426792351e-16,
+                "speedup": 19.04921087094807
+            },
+            "fmm_gpu": {
+                "status": "Success",
+                "init_time": 1.787657999433577,
+                "warmup_time": 0.44900819938629866,
+                "matvec_time": 0.4515074400231242,
+                "peak_memory_mb": 3294.2421875,
+                "rel_error": 1.0078369495801273e-13,
+                "speedup": 0.28004114415086767
+            },
+            "auto": {
+                "status": "Success",
+                "init_time": 1.7876386996358633,
+                "warmup_time": 0.4501054994761944,
+                "matvec_time": 0.45544971991330385,
+                "peak_memory_mb": 3296.46484375,
+                "rel_error": 1.0078369495801273e-13,
+                "speedup": 0.2776171651192876
+            }
+        }
+    },
+    "256": {
+        "3": {
+            "direct_cpu_serial": {
+                "status": "Success",
+                "init_time": 0.8876646002754569,
+                "warmup_time": 0.17512209992855787,
+                "matvec_time": 0.1738943601027131,
+                "peak_memory_mb": 3234.7109375,
+                "rel_error": 0.0,
+                "speedup": 1.0
+            },
+            "direct_cpu_parallel": {
+                "status": "Success",
+                "init_time": 0.8786243004724383,
+                "warmup_time": 0.03417230024933815,
+                "matvec_time": 0.02631657999008894,
+                "peak_memory_mb": 3242.421875,
+                "rel_error": 0.0,
+                "speedup": 6.607787188464584
+            },
+            "fmm_cpu_serial": {
+                "status": "Success",
+                "init_time": 3.810569499619305,
+                "warmup_time": 0.8927788008004427,
+                "matvec_time": 0.8795248799026012,
+                "peak_memory_mb": 3394.23046875,
+                "rel_error": 5.510984705088367e-10,
+                "speedup": 0.19771397498382334
+            },
+            "direct_gpu": {
+                "status": "Success",
+                "init_time": 1.4609023993834853,
+                "warmup_time": 0.148870799690485,
+                "matvec_time": 0.036072779819369315,
+                "peak_memory_mb": 3256.34765625,
+                "rel_error": 2.4443147093231604e-16,
+                "speedup": 4.82065316212033
+            },
+            "direct_gpu_dense": {
+                "status": "Success",
+                "init_time": 2.399587799794972,
+                "warmup_time": 0.005618100054562092,
+                "matvec_time": 0.005130779929459095,
+                "peak_memory_mb": 4287.15625,
+                "rel_error": 6.656751452539733e-16,
+                "speedup": 33.89238332056968
+            },
+            "fmm_gpu": {
+                "status": "Success",
+                "init_time": 3.8520835004746914,
+                "warmup_time": 0.9365141997113824,
+                "matvec_time": 0.903163599781692,
+                "peak_memory_mb": 4439.8828125,
+                "rel_error": 5.510984705088367e-10,
+                "speedup": 0.1925391591786316
+            },
+            "auto": {
+                "status": "Success",
+                "init_time": 3.7597673004493117,
+                "warmup_time": 0.888922699727118,
+                "matvec_time": 0.8830122198909521,
+                "peak_memory_mb": 4445.16796875,
+                "rel_error": 5.510984705088367e-10,
+                "speedup": 0.19693312978634459
+            }
+        },
+        "5": {
+            "direct_cpu_serial": {
+                "status": "Success",
+                "init_time": 1.3390736998990178,
+                "warmup_time": 0.506101000122726,
+                "matvec_time": 0.5075026199221611,
+                "peak_memory_mb": 4385.59765625,
+                "rel_error": 0.0,
+                "speedup": 1.0
+            },
+            "direct_cpu_parallel": {
+                "status": "Success",
+                "init_time": 1.3451085006818175,
+                "warmup_time": 0.08724850043654442,
+                "matvec_time": 0.08111323993653059,
+                "peak_memory_mb": 4396.421875,
+                "rel_error": 0.0,
+                "speedup": 6.256717402969863
+            },
+            "fmm_cpu_serial": {
+                "status": "Success",
+                "init_time": 4.120224099606276,
+                "warmup_time": 1.0974217001348734,
+                "matvec_time": 1.0925431596115232,
+                "peak_memory_mb": 4520.33203125,
+                "rel_error": 2.268059211824703e-11,
+                "speedup": 0.46451493971424834
+            },
+            "direct_gpu": {
+                "status": "Success",
+                "init_time": 2.4045155001804233,
+                "warmup_time": 0.37596490047872066,
+                "matvec_time": 0.12267010025680065,
+                "peak_memory_mb": 4403.05859375,
+                "rel_error": 3.034577818730084e-16,
+                "speedup": 4.1371338154916515
+            },
+            "direct_gpu_dense": {
+                "status": "Failed: Out of memory allocating 5,138,022,400 bytes (allocated so far: 238,041,600 bytes).",
+                "init_time": null,
+                "warmup_time": null,
+                "matvec_time": null,
+                "peak_memory_mb": null,
+                "rel_error": null,
+                "speedup": null
+            },
+            "fmm_gpu": {
+                "status": "Success",
+                "init_time": 4.13059370033443,
+                "warmup_time": 1.1249329997226596,
+                "matvec_time": 1.1054858999326824,
+                "peak_memory_mb": 4539.22265625,
+                "rel_error": 2.268059211824703e-11,
+                "speedup": 0.459076520065127
+            },
+            "auto": {
+                "status": "Success",
+                "init_time": 4.062831399962306,
+                "warmup_time": 1.1028458997607231,
+                "matvec_time": 1.1018801799044013,
+                "peak_memory_mb": 4542.0234375,
+                "rel_error": 2.268059211824703e-11,
+                "speedup": 0.4605787717918583
+            }
+        }
+    },
+    "512": {
+        "3": {
+            "direct_cpu_serial": {
+                "status": "Success",
+                "init_time": 3.5235497001558542,
+                "warmup_time": 0.6564997993409634,
+                "matvec_time": 0.6529223000630736,
+                "peak_memory_mb": 4510.45703125,
+                "rel_error": 0.0,
+                "speedup": 1.0
+            },
+            "direct_cpu_parallel": {
+                "status": "Success",
+                "init_time": 3.548833000473678,
+                "warmup_time": 0.292340200394392,
+                "matvec_time": 0.12967501990497113,
+                "peak_memory_mb": 4529.40234375,
+                "rel_error": 0.0,
+                "speedup": 5.035066125623503
+            },
+            "fmm_cpu_serial": {
+                "status": "Success",
+                "init_time": 11.408640599809587,
+                "warmup_time": 4.3730041002854705,
+                "matvec_time": 4.35856170039624,
+                "peak_memory_mb": 4882.546875,
+                "rel_error": 1.1229806501721403e-10,
+                "speedup": 0.14980223866137218
+            },
+            "direct_gpu": {
+                "status": "Success",
+                "init_time": 5.821234800852835,
+                "warmup_time": 0.20024430006742477,
+                "matvec_time": 0.06539002005010844,
+                "peak_memory_mb": 4584.203125,
+                "rel_error": 2.922240308341193e-16,
+                "speedup": 9.985045111818877
+            },
+            "direct_gpu_dense": {
+                "status": "Failed: Out of memory allocating 3,774,873,600 bytes (allocated so far: 265,435,648 bytes).",
+                "init_time": null,
+                "warmup_time": null,
+                "matvec_time": null,
+                "peak_memory_mb": null,
+                "rel_error": null,
+                "speedup": null
+            },
+            "fmm_gpu": {
+                "status": "Success",
+                "init_time": 11.29648959916085,
+                "warmup_time": 4.438147900626063,
+                "matvec_time": 4.434299159795046,
+                "peak_memory_mb": 4954.9140625,
+                "rel_error": 1.1229806501721403e-10,
+                "speedup": 0.14724362893306725
+            },
+            "auto": {
+                "status": "Success",
+                "init_time": 11.27848710026592,
+                "warmup_time": 4.416669299826026,
+                "matvec_time": 4.411458700150251,
+                "peak_memory_mb": 4963.69140625,
+                "rel_error": 1.1229806501721403e-10,
+                "speedup": 0.14800598723520533
+            }
+        },
+        "5": {
+            "direct_cpu_serial": {
+                "status": "Success",
+                "init_time": 5.391678799875081,
+                "warmup_time": 2.054744000546634,
+                "matvec_time": 2.0448266200721266,
+                "peak_memory_mb": 4973.60546875,
+                "rel_error": 0.0,
+                "speedup": 1.0
+            },
+            "direct_cpu_parallel": {
+                "status": "Success",
+                "init_time": 5.397278999909759,
+                "warmup_time": 0.3501218995079398,
+                "matvec_time": 0.387931839749217,
+                "peak_memory_mb": 4992.0546875,
+                "rel_error": 0.0,
+                "speedup": 5.271097678896448
+            },
+            "fmm_cpu_serial": {
+                "status": "Success",
+                "init_time": 11.459898499771953,
+                "warmup_time": 6.116756400093436,
+                "matvec_time": 6.108361979946494,
+                "peak_memory_mb": 4988.5,
+                "rel_error": 1.9647848145896226e-12,
+                "speedup": 0.33475858614555093
+            },
+            "direct_gpu": {
+                "status": "Success",
+                "init_time": 9.590056700631976,
+                "warmup_time": 0.2058322997763753,
+                "matvec_time": 0.17573243994265794,
+                "peak_memory_mb": 5056.73046875,
+                "rel_error": 3.189865172708447e-16,
+                "speedup": 11.636022471089344
+            },
+            "direct_gpu_dense": {
+                "status": "Failed: Out of memory allocating 20,552,089,600 bytes (allocated so far: 863,123,968 bytes).",
+                "init_time": null,
+                "warmup_time": null,
+                "matvec_time": null,
+                "peak_memory_mb": null,
+                "rel_error": null,
+                "speedup": null
+            },
+            "fmm_gpu": {
+                "status": "Success",
+                "init_time": 11.34031009953469,
+                "warmup_time": 6.206625699996948,
+                "matvec_time": 6.157535439915955,
+                "peak_memory_mb": 5061.265625,
+                "rel_error": 1.9647848145896226e-12,
+                "speedup": 0.33208523767750114
+            },
+            "auto": {
+                "status": "Success",
+                "init_time": 11.352563300170004,
+                "warmup_time": 6.14687279984355,
+                "matvec_time": 6.1548235600814225,
+                "peak_memory_mb": 5070.171875,
+                "rel_error": 1.9647848145896226e-12,
+                "speedup": 0.3322315579173281
+            }
+        }
+    },
+    "1024": {
+        "3": {
+            "direct_cpu_serial": {
+                "status": "Success",
+                "init_time": 14.350048900581896,
+                "warmup_time": 3.0998673997819424,
+                "matvec_time": 3.095676239952445,
+                "peak_memory_mb": 5466.1484375,
+                "rel_error": 0.0,
+                "speedup": 1.0
+            },
+            "direct_cpu_parallel": {
+                "status": "Success",
+                "init_time": 14.772440699860454,
+                "warmup_time": 1.044653800316155,
+                "matvec_time": 0.6829109203070403,
+                "peak_memory_mb": 5493.28515625,
+                "rel_error": 0.0,
+                "speedup": 4.533060093050809
+            },
+            "fmm_cpu_serial": {
+                "status": "Success",
+                "init_time": 23.06777389999479,
+                "warmup_time": 18.98984880000353,
+                "matvec_time": 18.963069240190087,
+                "peak_memory_mb": 5258.44140625,
+                "rel_error": 9.629235228888592e-10,
+                "speedup": 0.1632476368008776
+            },
+            "direct_gpu": {
+                "status": "Success",
+                "init_time": 23.51150169968605,
+                "warmup_time": 0.09794129990041256,
+                "matvec_time": 0.08457484021782875,
+                "peak_memory_mb": 5726.9609375,
+                "rel_error": 2.7315850783115573e-16,
+                "speedup": 36.60280329208192
+            },
+            "direct_gpu_dense": {
+                "status": "Failed: Unable to allocate 14.1 GiB for an array with shape (30720, 30720) and data type complex128",
+                "init_time": null,
+                "warmup_time": null,
+                "matvec_time": null,
+                "peak_memory_mb": null,
+                "rel_error": null,
+                "speedup": null
+            },
+            "fmm_gpu": {
+                "status": "Success",
+                "init_time": 22.917102900333703,
+                "warmup_time": 19.041549200192094,
+                "matvec_time": 19.026146980002522,
+                "peak_memory_mb": 5518.82421875,
+                "rel_error": 9.629235228888592e-10,
+                "speedup": 0.16270641886694995
+            },
+            "auto": {
+                "status": "Success",
+                "init_time": 22.906719299964607,
+                "warmup_time": 19.049745299853384,
+                "matvec_time": 19.086821320094167,
+                "peak_memory_mb": 5518.8046875,
+                "rel_error": 9.629235228888592e-10,
+                "speedup": 0.1621891978782967
+            }
+        },
+        "5": {
+            "direct_cpu_serial": {
+                "status": "Skipped (Direct large size restriction)",
+                "init_time": null,
+                "warmup_time": null,
+                "matvec_time": null,
+                "peak_memory_mb": null,
+                "rel_error": null,
+                "speedup": null
+            },
+            "direct_cpu_parallel": {
+                "status": "Skipped (Direct large size restriction)",
+                "init_time": null,
+                "warmup_time": null,
+                "matvec_time": null,
+                "peak_memory_mb": null,
+                "rel_error": null,
+                "speedup": null
+            },
+            "fmm_cpu_serial": {
+                "status": "Success",
+                "init_time": 22.56906620040536,
+                "warmup_time": 25.114513400010765,
+                "matvec_time": 25.097392700053753,
+                "peak_memory_mb": 5456.38671875,
+                "rel_error": null,
+                "speedup": null
+            },
+            "direct_gpu": {
+                "status": "Success",
+                "init_time": 38.90243110060692,
+                "warmup_time": 0.4059546999633312,
+                "matvec_time": 0.3908894000574946,
+                "peak_memory_mb": 11702.37890625,
+                "rel_error": null,
+                "speedup": null
+            },
+            "direct_gpu_dense": {
+                "status": "Failed: Required dense matrix size 76.56 GiB exceeds available GPU free memory 17.69 GiB.",
+                "init_time": null,
+                "warmup_time": null,
+                "matvec_time": null,
+                "peak_memory_mb": null,
+                "rel_error": null,
+                "speedup": null
+            },
+            "fmm_gpu": {
+                "status": "Success",
+                "init_time": 22.825467799790204,
+                "warmup_time": 25.09559279959649,
+                "matvec_time": 25.055837279558183,
+                "peak_memory_mb": 9825.8046875,
+                "rel_error": null,
+                "speedup": null
+            },
+            "auto": {
+                "status": "Success",
+                "init_time": 22.599480099976063,
+                "warmup_time": 24.932570499368012,
+                "matvec_time": 24.95589069984853,
+                "peak_memory_mb": 9817.14453125,
+                "rel_error": null,
+                "speedup": null
+            }
+        }
+    }
+}

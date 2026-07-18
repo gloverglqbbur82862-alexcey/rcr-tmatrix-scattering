@@ -1,0 +1,12 @@
+{
+  "source_type": "deterministic_doubled_frozen_geometry",
+  "description": "Two translated copies of the frozen N=256 input geometry; used only as a frozen N=512 performance stress-test geometry, not as an independently generated BCCA seed-42 realization.",
+  "source_input": "experiments\\mstm_gpu_matched_benchmark\\frozen_inputs\\mstm_bcca_n256_w550_seed42.inp",
+  "output_input": "experiments\\mstm_gpu_matched_benchmark\\frozen_inputs\\mstm_bcca_n512_w550_seed42.inp",
+  "source_n": 256,
+  "output_n": 512,
+  "radius_dimless": 0.28559933214452665,
+  "gap_factor": 1.05,
+  "min_pair_distance_dimless": 0.5711986642143904,
+  "min_surface_gap_dimless": -7.466294249525163e-11
+}

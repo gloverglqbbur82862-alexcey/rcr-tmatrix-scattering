@@ -1,0 +1,227 @@
+{
+    "16": {
+        "1": {
+            "avg_mvm": 0.03217,
+            "speedup": 1.0,
+            "efficiency": 1.0
+        },
+        "4": {
+            "avg_mvm": 0.00847,
+            "speedup": 3.8,
+            "efficiency": 0.949
+        },
+        "8": {
+            "avg_mvm": 0.00405,
+            "speedup": 7.95,
+            "efficiency": 0.994
+        },
+        "16": {
+            "avg_mvm": 0.00215,
+            "speedup": 15.0,
+            "efficiency": 0.937
+        },
+        "24": {
+            "avg_mvm": 0.00232,
+            "speedup": 13.88,
+            "efficiency": 0.578
+        },
+        "48": {
+            "avg_mvm": 0.00467,
+            "speedup": 6.9,
+            "efficiency": 0.144
+        },
+        "64": {
+            "avg_mvm": 0.00665,
+            "speedup": 4.84,
+            "efficiency": 0.076
+        },
+        "128": {
+            "avg_mvm": 0.00913,
+            "speedup": 3.52,
+            "efficiency": 0.028
+        },
+        "256": {
+            "avg_mvm": 0.01467,
+            "speedup": 2.19,
+            "efficiency": 0.009
+        }
+    },
+    "32": {
+        "1": {
+            "avg_mvm": 0.13245,
+            "speedup": 1.0,
+            "efficiency": 1.0
+        },
+        "4": {
+            "avg_mvm": 0.03378,
+            "speedup": 3.92,
+            "efficiency": 0.98
+        },
+        "8": {
+            "avg_mvm": 0.01867,
+            "speedup": 7.09,
+            "efficiency": 0.887
+        },
+        "16": {
+            "avg_mvm": 0.00957,
+            "speedup": 13.85,
+            "efficiency": 0.865
+        },
+        "24": {
+            "avg_mvm": 0.00959,
+            "speedup": 13.81,
+            "efficiency": 0.575
+        },
+        "48": {
+            "avg_mvm": 0.00845,
+            "speedup": 15.67,
+            "efficiency": 0.326
+        },
+        "64": {
+            "avg_mvm": 0.01122,
+            "speedup": 11.8,
+            "efficiency": 0.184
+        },
+        "128": {
+            "avg_mvm": 0.01272,
+            "speedup": 10.41,
+            "efficiency": 0.081
+        },
+        "256": {
+            "avg_mvm": 0.01844,
+            "speedup": 7.18,
+            "efficiency": 0.028
+        }
+    },
+    "64": {
+        "1": {
+            "avg_mvm": 0.57253,
+            "speedup": 1.0,
+            "efficiency": 1.0
+        },
+        "4": {
+            "avg_mvm": 0.14499,
+            "speedup": 3.95,
+            "efficiency": 0.987
+        },
+        "8": {
+            "avg_mvm": 0.07591,
+            "speedup": 7.54,
+            "efficiency": 0.943
+        },
+        "16": {
+            "avg_mvm": 0.0357,
+            "speedup": 16.04,
+            "efficiency": 1.002
+        },
+        "24": {
+            "avg_mvm": 0.02849,
+            "speedup": 20.1,
+            "efficiency": 0.837
+        },
+        "48": {
+            "avg_mvm": 0.03116,
+            "speedup": 18.38,
+            "efficiency": 0.383
+        },
+        "64": {
+            "avg_mvm": 0.02549,
+            "speedup": 22.46,
+            "efficiency": 0.351
+        },
+        "128": {
+            "avg_mvm": 0.02915,
+            "speedup": 19.64,
+            "efficiency": 0.153
+        },
+        "256": {
+            "avg_mvm": 0.03642,
+            "speedup": 15.72,
+            "efficiency": 0.061
+        }
+    },
+    "128": {
+        "1": {
+            "avg_mvm": 2.246509,
+            "speedup": 1.0,
+            "efficiency": 1.0
+        },
+        "8": {
+            "avg_mvm": 0.277882,
+            "speedup": 8.084399133445132,
+            "efficiency": 1.0105498916806415
+        },
+        "16": {
+            "avg_mvm": 0.223352,
+            "speedup": 10.058154840789427,
+            "efficiency": 0.6286346775493392
+        },
+        "24": {
+            "avg_mvm": 0.103242,
+            "speedup": 21.759642393599506,
+            "efficiency": 0.9066517663999795
+        },
+        "48": {
+            "avg_mvm": 0.100269,
+            "speedup": 22.404821031425467,
+            "efficiency": 0.4667671048213639
+        },
+        "64": {
+            "avg_mvm": 0.086557,
+            "speedup": 25.954099610661185,
+            "efficiency": 0.405532806416581
+        },
+        "128": {
+            "avg_mvm": 0.078669,
+            "speedup": 28.556470782646276,
+            "efficiency": 0.22309742798942403
+        },
+        "256": {
+            "avg_mvm": 0.100044,
+            "speedup": 22.455209707728603,
+            "efficiency": 0.08771566292081485
+        }
+    },
+    "256": {
+        "1": {
+            "avg_mvm": 9.655734,
+            "speedup": 1.0,
+            "efficiency": 1.0
+        },
+        "8": {
+            "avg_mvm": 1.19637,
+            "speedup": 8.070859349532336,
+            "efficiency": 1.008857418691542
+        },
+        "16": {
+            "avg_mvm": 0.560197,
+            "speedup": 17.23631865218843,
+            "efficiency": 1.0772699157617769
+        },
+        "24": {
+            "avg_mvm": 0.486868,
+            "speedup": 19.83234470123319,
+            "efficiency": 0.8263476958847162
+        },
+        "48": {
+            "avg_mvm": 0.386126,
+            "speedup": 25.006692116045024,
+            "efficiency": 0.5209727524176047
+        },
+        "64": {
+            "avg_mvm": 0.342848,
+            "speedup": 28.163308521560577,
+            "efficiency": 0.440051695649384
+        },
+        "128": {
+            "avg_mvm": 0.307828,
+            "speedup": 31.367302519588865,
+            "efficiency": 0.245057050934288
+        },
+        "256": {
+            "avg_mvm": 0.314501,
+            "speedup": 30.70175929488301,
+            "efficiency": 0.11992874724563676
+        }
+    }
+}

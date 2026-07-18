@@ -1,0 +1,337 @@
+{
+  "128": {
+    "3": {
+      "is_bcca": true,
+      "direct": {
+        "init_time": 0.12293229199713096,
+        "warmup_time": 0.0076369580056052655,
+        "matvec_time": 0.0033079001965234055
+      },
+      "fmm_reference": {
+        "init_time": 3.649111874998198,
+        "warmup_time": 3.257986915996298,
+        "matvec_time": 2.8264074723410886
+      },
+      "fmm_speed": {
+        "init_time": 0.518579416006105,
+        "warmup_time": 0.6287902909971308,
+        "matvec_time": 0.6017877666017739
+      },
+      "rel_err_reference": 1.0897586704899318e-12,
+      "rel_err_speed": 5.348759732102736e-08,
+      "p_levels": [
+        3,
+        3,
+        16,
+        13,
+        11
+      ]
+    },
+    "5": {
+      "is_bcca": true,
+      "direct": {
+        "init_time": 0.20288812500075437,
+        "warmup_time": 0.011430583006585948,
+        "matvec_time": 0.007999975202255882
+      },
+      "fmm_reference": {
+        "init_time": 3.6112049579969607,
+        "warmup_time": 2.9719604999991134,
+        "matvec_time": 2.895933569666037
+      },
+      "fmm_speed": {
+        "init_time": 0.520164500005194,
+        "warmup_time": 0.6950837500044145,
+        "matvec_time": 0.7005288164014928
+      },
+      "rel_err_reference": 6.400013791796059e-12,
+      "rel_err_speed": 3.8660460378835186e-08,
+      "p_levels": [
+        5,
+        5,
+        16,
+        13,
+        11
+      ]
+    },
+    "7": {
+      "is_bcca": true,
+      "direct": {
+        "init_time": 0.3760211250046268,
+        "warmup_time": 0.01838954200502485,
+        "matvec_time": 0.015983441603020766
+      },
+      "fmm_reference": {
+        "init_time": 3.641008000005968,
+        "warmup_time": 3.096094874999835,
+        "matvec_time": 3.149027986000874
+      },
+      "fmm_speed": {
+        "init_time": 0.5383297920052428,
+        "warmup_time": 0.8829629579995526,
+        "matvec_time": 0.904547833398101
+      },
+      "rel_err_reference": 8.420979967646834e-12,
+      "rel_err_speed": 4.8851515014977006e-09,
+      "p_levels": [
+        7,
+        7,
+        16,
+        13,
+        11
+      ]
+    }
+  },
+  "256": {
+    "3": {
+      "is_bcca": true,
+      "direct": {
+        "init_time": 0.4976751670037629,
+        "warmup_time": 0.014527833991451189,
+        "matvec_time": 0.01358509160054382
+      },
+      "fmm_reference": {
+        "init_time": 5.77334429199982,
+        "warmup_time": 7.278889667009935,
+        "matvec_time": 7.3754360139961745
+      },
+      "fmm_speed": {
+        "init_time": 0.931960000001709,
+        "warmup_time": 1.6545904579979833,
+        "matvec_time": 1.634776583200437
+      },
+      "rel_err_reference": 1.0669699228711002e-12,
+      "rel_err_speed": 1.669715180245509e-08,
+      "p_levels": [
+        3,
+        3,
+        18,
+        15,
+        12,
+        11
+      ]
+    },
+    "5": {
+      "is_bcca": true,
+      "direct": {
+        "init_time": 0.8042690840084106,
+        "warmup_time": 0.032655083006829955,
+        "matvec_time": 0.0289317414019024
+      },
+      "fmm_reference": {
+        "init_time": 5.813104207991273,
+        "warmup_time": 7.6444442920037545,
+        "matvec_time": 7.675618041670532
+      },
+      "fmm_speed": {
+        "init_time": 0.9331660410098266,
+        "warmup_time": 1.987787207996007,
+        "matvec_time": 2.0440592252009084
+      },
+      "rel_err_reference": 1.2870058098787157e-12,
+      "rel_err_speed": 4.014786653568424e-09,
+      "p_levels": [
+        5,
+        5,
+        18,
+        15,
+        12,
+        11
+      ]
+    },
+    "7": {
+      "is_bcca": true,
+      "direct": {
+        "init_time": 1.5281314580061007,
+        "warmup_time": 0.05924916699586902,
+        "matvec_time": 0.07274927500402555
+      },
+      "fmm_reference": {
+        "init_time": 5.801346541004023,
+        "warmup_time": 8.530294124997454,
+        "matvec_time": 8.40761080532684
+      },
+      "fmm_speed": {
+        "init_time": 0.9471484999958193,
+        "warmup_time": 2.787730374999228,
+        "matvec_time": 2.7770245499996236
+      },
+      "rel_err_reference": 3.3966279801014044e-13,
+      "rel_err_speed": 1.3170754852583025e-10,
+      "p_levels": [
+        7,
+        7,
+        18,
+        15,
+        12,
+        11
+      ]
+    }
+  },
+  "512": {
+    "3": {
+      "is_bcca": false,
+      "direct": {
+        "init_time": 1.992619750002632,
+        "warmup_time": 0.05614874999446329,
+        "matvec_time": 0.06335433320200537
+      },
+      "fmm_reference": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_speed": {
+        "init_time": 1.4807634580065496,
+        "warmup_time": 8.109071084007155,
+        "matvec_time": 8.060471158201107
+      },
+      "rel_err_reference": null,
+      "rel_err_speed": 1.1229806638157691e-10,
+      "p_levels": [
+        3,
+        3,
+        19,
+        15,
+        13
+      ]
+    },
+    "5": {
+      "is_bcca": false,
+      "direct": {
+        "init_time": 3.282175250002183,
+        "warmup_time": 0.13659979100339115,
+        "matvec_time": 0.1650055082020117
+      },
+      "fmm_reference": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_speed": {
+        "init_time": 1.5612978749995818,
+        "warmup_time": 8.99711033400672,
+        "matvec_time": 9.097927433397853
+      },
+      "rel_err_reference": null,
+      "rel_err_speed": 1.9647834423015048e-12,
+      "p_levels": [
+        5,
+        5,
+        19,
+        15,
+        13
+      ]
+    },
+    "7": {
+      "is_bcca": false,
+      "direct": {
+        "init_time": 6.200393708990305,
+        "warmup_time": 0.2512425000022631,
+        "matvec_time": 0.34159950840112285
+      },
+      "fmm_reference": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_speed": {
+        "init_time": 1.4920128750090953,
+        "warmup_time": 11.45258929200645,
+        "matvec_time": 11.407238974998473
+      },
+      "rel_err_reference": null,
+      "rel_err_speed": 6.811261072777696e-15,
+      "p_levels": [
+        7,
+        7,
+        19,
+        15,
+        13
+      ]
+    }
+  },
+  "1024": {
+    "3": {
+      "is_bcca": false,
+      "direct": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_reference": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_speed": {
+        "init_time": 2.616149833003874,
+        "warmup_time": 18.150658500002464,
+        "matvec_time": 18.327562249996117
+      },
+      "rel_err_reference": null,
+      "rel_err_speed": null,
+      "p_levels": [
+        3,
+        3,
+        20,
+        16,
+        13
+      ]
+    },
+    "5": {
+      "is_bcca": false,
+      "direct": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_reference": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_speed": {
+        "init_time": 2.6282605830056127,
+        "warmup_time": 22.54812179200235,
+        "matvec_time": 22.51846855840413
+      },
+      "rel_err_reference": null,
+      "rel_err_speed": null,
+      "p_levels": [
+        5,
+        5,
+        20,
+        16,
+        13
+      ]
+    },
+    "7": {
+      "is_bcca": false,
+      "direct": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_reference": {
+        "init_time": null,
+        "warmup_time": null,
+        "matvec_time": null
+      },
+      "fmm_speed": {
+        "init_time": 2.6041137499996694,
+        "warmup_time": 31.581922540994128,
+        "matvec_time": 31.697456116596005
+      },
+      "rel_err_reference": null,
+      "rel_err_speed": null,
+      "p_levels": [
+        7,
+        7,
+        20,
+        16,
+        13
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript when available."
+title: "Fast RCR T-matrix computation of light scattering properties for sphere aggregates"
+authors:
+  - family-names: Wu
+    given-names: Jingjia
+  - family-names: Xu
+    given-names: Guanglang
+  - family-names: Zhu
+    given-names: Ping
+  - family-names: Liu
+    given-names: Huizeng
+license: MIT
+version: "0.1.0"

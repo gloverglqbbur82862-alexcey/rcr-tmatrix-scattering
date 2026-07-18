@@ -1,0 +1,332 @@
+{
+  "purpose": "same-physical-workstation GPU RCR versus MSTM CPU/MPI benchmark",
+  "parameters": {
+    "aggregate": "frozen sphere-aggregate geometries; see geometry_sources_by_n and geometry_metadata_by_n",
+    "seed": 42,
+    "monomer_radius_nm": 25.0,
+    "wavelength_nm": 550.0,
+    "radius_dimless": 0.28559933214452665,
+    "refractive_index": {
+      "real": 1.95,
+      "imag": 0.79
+    },
+    "monomer_order": 3,
+    "solution_epsilon": "1.d-12",
+    "translation_epsilon": "1.d-12",
+    "random_orientation": true,
+    "calculate_scattering_matrix": true,
+    "aggregate_order_policy": "mstm_estimated"
+  },
+  "timing_policy": [
+    "Aggregate-coordinate generation and input-deck generation are excluded from timed values.",
+    "MSTM wall time is measured around the WSL2 command invocation after a one-command WSL warm-up; it includes executable startup, input parsing, solve, and output-file writing.",
+    "RCR process/wall time includes native Python subprocess startup plus JIT/GPU warm-up and the physical computation.",
+    "RCR compute-window time excludes the small dummy JIT/GPU warm-up and includes solver construction, aggregate T-matrix construction, and orientation averaging.",
+    "For each N, all solvers use the same frozen sphere-aggregate geometry, monomer radius, wavelength, refractive index, random-orientation output, and tolerance policy recorded here.",
+    "MSTM MPI timings use the OpenMPI rank counts recorded in the environment metadata."
+  ],
+  "environment": {
+    "timestamp_utc": "2026-06-11T19:37:47Z",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.13.2",
+    "git_commit": "unavailable",
+    "wsl_distro": "Ubuntu-24.04",
+    "mstm_wsl_binary": "/root/mstm_build/mstm",
+    "mstm_mpi_wsl_binary": "/root/mstm_build_parallel/mstm_parallel",
+    "requested_mpi_procs": [
+      8
+    ],
+    "wsl_gfortran": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "wsl_mpifort": "/usr/bin/mpifort",
+    "wsl_mpirun": "/usr/bin/mpirun",
+    "nvidia_smi": "0, NVIDIA GeForce RTX 3090, 24576 MiB"
+  },
+  "summary": {
+    "256": {
+      "mstm_wsl_mpi_np8": {
+        "count": 2,
+        "median_time_s": 258.3002217002213,
+        "min_time_s": 257.9500796003267,
+        "mean_time_s": 258.3002217002213,
+        "stdev_time_s": 0.49517570642871467,
+        "median_qext": 3.1376,
+        "min_qext": 3.1376,
+        "max_qext": 3.1376,
+        "failures": 0
+      },
+      "rcr_direct_gpu_t64": {
+        "count": 2,
+        "median_time_s": 62.043565849773586,
+        "min_time_s": 61.71696660015732,
+        "mean_time_s": 62.043565849773586,
+        "stdev_time_s": 0.46188108826819824,
+        "median_qext": 3.1375985208995147,
+        "min_qext": 3.1375985208995147,
+        "max_qext": 3.1375985208995147,
+        "failures": 0
+      },
+      "rcr_direct_gpu_t64_process": {
+        "count": 2,
+        "median_time_s": 96.0920143998228,
+        "min_time_s": 95.7030523000285,
+        "mean_time_s": 96.0920143998228,
+        "stdev_time_s": 0.550075476778214,
+        "median_qext": 3.1375985208995147,
+        "min_qext": 3.1375985208995147,
+        "max_qext": 3.1375985208995147,
+        "failures": 0
+      },
+      "rcr_direct_gpu_dense_t64": {
+        "count": 2,
+        "median_time_s": 84.43153849989176,
+        "min_time_s": 84.02264089975506,
+        "mean_time_s": 84.43153849989176,
+        "stdev_time_s": 0.578268531735128,
+        "median_qext": 3.137598520899515,
+        "min_qext": 3.137598520899515,
+        "max_qext": 3.137598520899515,
+        "failures": 0
+      },
+      "rcr_direct_gpu_dense_t64_process": {
+        "count": 2,
+        "median_time_s": 122.39028459973633,
+        "min_time_s": 121.98100630007684,
+        "mean_time_s": 122.39028459973633,
+        "stdev_time_s": 0.5788069221634513,
+        "median_qext": 3.137598520899515,
+        "min_qext": 3.137598520899515,
+        "max_qext": 3.137598520899515,
+        "failures": 0
+      }
+    }
+  },
+  "aggregate_orders_by_n": {
+    "256": {
+      "rcr_auto": 19,
+      "mstm_estimated_values": [
+        21
+      ],
+      "used_for_rcr": 21,
+      "policy": "mstm_estimated"
+    }
+  },
+  "geometry_sources_by_n": {
+    "256": "experiments\\mstm_gpu_matched_benchmark\\frozen_inputs\\mstm_bcca_n256_w550_seed42.inp"
+  },
+  "geometry_metadata_by_n": {
+    "256": {
+      "source_type": "deterministic_doubled_frozen_geometry",
+      "description": "Two translated copies of the frozen N=128 BCCA seed-42 geometry; used only as a frozen N=256 performance stress-test geometry, not as an independently generated BCCA seed-42 realization.",
+      "source_input": "experiments\\mstm_validation\\inputs\\mstm_bcca_n128_w550_seed42.inp",
+      "output_input": "experiments\\mstm_gpu_matched_benchmark\\frozen_inputs\\mstm_bcca_n256_w550_seed42.inp",
+      "source_n": 128,
+      "output_n": 256,
+      "radius_dimless": 0.28559933214452665,
+      "gap_factor": 1.05,
+      "min_pair_distance_dimless": 0.5711986642143904,
+      "min_surface_gap_dimless": -7.466294249525163e-11
+    }
+  },
+  "trials": [
+    {
+      "solver": "mstm_wsl_mpi_np8",
+      "n": 256,
+      "rep": 1,
+      "mpi_procs": 8,
+      "command": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu-24.04",
+        "--",
+        "bash",
+        "-lc",
+        "cd /mnt/c/Users/Administrator/fast_mtp_rcr_scattering/experiments/mstm_gpu_matched_benchmark && OMPI_ALLOW_RUN_AS_ROOT=1 OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1 mpirun --allow-run-as-root --oversubscribe -np 8 /root/mstm_build_parallel/mstm_parallel inputs/mstm_wsl_mpi_np8_bcca_n256_w550_seed42_rep1.inp"
+      ],
+      "input": "experiments\\mstm_gpu_matched_benchmark\\inputs\\mstm_wsl_mpi_np8_bcca_n256_w550_seed42_rep1.inp",
+      "output": "experiments\\mstm_gpu_matched_benchmark\\outputs\\mstm_wsl_mpi_np8_bcca_n256_w550_seed42_rep1.out",
+      "wall_time_s": 258.6503638001159,
+      "returncode": 0,
+      "stdout_tail": "timated t matrix order:\n    21\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3      7680\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   12  0.42210E+00  0.28210E+00  0.42210E+00    0.77   12.33 min\n   2   12  0.12342E+01  0.82059E+00  0.81211E+00    0.71   11.24 min\n   3   12  0.20531E+01  0.14033E+01  0.81889E+00    0.64   10.06 min\n   4   13  0.26212E+01  0.18416E+01  0.56814E+00    0.67   10.24 min\n   5   13  0.29358E+01  0.21001E+01  0.31457E+00    0.66    9.83 min\n   6   13  0.30739E+01  0.22180E+01  0.13811E+00    0.68    9.89 min\n   7   13  0.31215E+01  0.22596E+01  0.47552E-01    0.67    9.41 min\n   8   13  0.31343E+01  0.22709E+01  0.12843E-01    0.67    8.95 min\n   9   13  0.31371E+01  0.22734E+01  0.27352E-02    0.65    8.26 min\n  10   13  0.31375E+01  0.22738E+01  0.47009E-03    0.65    7.86 min\n  11   13  0.31376E+01  0.22739E+01  0.66799E-04    0.65    7.34 min\n  12   13  0.31376E+01  0.22739E+01  0.79512E-05    0.66    6.96 min\n  13   13  0.31376E+01  0.22739E+01  0.80631E-06    0.64    6.13 min\n t matrix ext, sca:  0.31376E+01  0.86371E+00\n t matrix read time:     0.61 sec\n d matrix calculation, order+degree per proc.:   182.25\n d matrix time:     0.05 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 3.1376,
+        "qabs": 2.2739,
+        "qsca": 0.86371,
+        "estimated_t_matrix_order": 21,
+        "t_matrix_order": 13
+      },
+      "status": "success"
+    },
+    {
+      "solver": "mstm_wsl_mpi_np8",
+      "n": 256,
+      "rep": 2,
+      "mpi_procs": 8,
+      "command": [
+        "wsl.exe",
+        "-d",
+        "Ubuntu-24.04",
+        "--",
+        "bash",
+        "-lc",
+        "cd /mnt/c/Users/Administrator/fast_mtp_rcr_scattering/experiments/mstm_gpu_matched_benchmark && OMPI_ALLOW_RUN_AS_ROOT=1 OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1 mpirun --allow-run-as-root --oversubscribe -np 8 /root/mstm_build_parallel/mstm_parallel inputs/mstm_wsl_mpi_np8_bcca_n256_w550_seed42_rep2.inp"
+      ],
+      "input": "experiments\\mstm_gpu_matched_benchmark\\inputs\\mstm_wsl_mpi_np8_bcca_n256_w550_seed42_rep2.inp",
+      "output": "experiments\\mstm_gpu_matched_benchmark\\outputs\\mstm_wsl_mpi_np8_bcca_n256_w550_seed42_rep2.out",
+      "wall_time_s": 257.9500796003267,
+      "returncode": 0,
+      "stdout_tail": "timated t matrix order:\n    21\n layer 0 refractive index\n  1.0000E+00  0.0000E+00\n number of plane boundaries \n  0\n max_iterations,solution_epsilon, mie_epsilon\n     10000  1.0000E-12  1.0000E-06\n maximum Mie order, number of equations:\n   3      7680\n mean sphere Mie extinction, absorption efficiencies\n  3.2430E-01  3.1712E-01\n****************************************************\n calculation results for run \n           1\n  n   # its  qext         qabs           error     sec/soln est. time rem.\n   1   12  0.42210E+00  0.28210E+00  0.42210E+00    0.65   10.39 min\n   2   12  0.12342E+01  0.82059E+00  0.81211E+00    0.66   10.45 min\n   3   12  0.20531E+01  0.14033E+01  0.81889E+00    0.65   10.12 min\n   4   13  0.26212E+01  0.18416E+01  0.56814E+00    0.68   10.38 min\n   5   13  0.29358E+01  0.21001E+01  0.31457E+00    0.66    9.83 min\n   6   13  0.30739E+01  0.22180E+01  0.13811E+00    0.69   10.02 min\n   7   13  0.31215E+01  0.22596E+01  0.47552E-01    0.68    9.49 min\n   8   13  0.31343E+01  0.22709E+01  0.12843E-01    0.67    9.01 min\n   9   13  0.31371E+01  0.22734E+01  0.27352E-02    0.65    8.31 min\n  10   13  0.31375E+01  0.22738E+01  0.47009E-03    0.65    7.89 min\n  11   13  0.31376E+01  0.22739E+01  0.66799E-04    0.65    7.35 min\n  12   13  0.31376E+01  0.22739E+01  0.79512E-05    0.65    6.82 min\n  13   13  0.31376E+01  0.22739E+01  0.80631E-06    0.64    6.17 min\n t matrix ext, sca:  0.31376E+01  0.86371E+00\n t matrix read time:     0.59 sec\n d matrix calculation, order+degree per proc.:   182.25\n d matrix time:     0.05 sec\n scat matrix coef time:     0.00 sec\n",
+      "stderr_tail": "",
+      "parsed": {
+        "qext": 3.1376,
+        "qabs": 2.2739,
+        "qsca": 0.86371,
+        "estimated_t_matrix_order": 21,
+        "t_matrix_order": 13
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_gpu_t64",
+      "n": 256,
+      "rep": 1,
+      "backend": "direct_gpu",
+      "threads": 64,
+      "aggregate_order": 21,
+      "process_wall_time_s": 96.4809764996171,
+      "timed_window_s": 62.37016509938985,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.3063749674901256, \"profile_data\": {\"assembly_time\": 0.0, \"h2d_time\": 0.0, \"krylov_iters\": 16, \"merge_gemm_time\": 0.08376900013536215, \"merge_time\": 3.6096579004079103, \"orientation_time\": 0.36415319982916117, \"precompute_merge_time\": 3.5252270996570587, \"rhs_time\": 8.608649600297213, \"solve_time\": 41.62267479952425, \"vram_mb\": 0.0}, \"qabs\": 2.273885841084026, \"qext\": 3.1375985208995147, \"qsca\": 0.8637126798154888, \"wall_time_s\": 62.37016509938985}\n",
+      "stderr_tail": "C:\\Python313\\Lib\\site-packages\\cupy\\_environment.py:275: UserWarning: CUDA path could not be detected. Set CUDA_PATH environment variable if CuPy fails to load.\n  warnings.warn(\n",
+      "parsed": {
+        "g": 0.3063749674901256,
+        "profile_data": {
+          "assembly_time": 0.0,
+          "h2d_time": 0.0,
+          "krylov_iters": 16,
+          "merge_gemm_time": 0.08376900013536215,
+          "merge_time": 3.6096579004079103,
+          "orientation_time": 0.36415319982916117,
+          "precompute_merge_time": 3.5252270996570587,
+          "rhs_time": 8.608649600297213,
+          "solve_time": 41.62267479952425,
+          "vram_mb": 0.0
+        },
+        "qabs": 2.273885841084026,
+        "qext": 3.1375985208995147,
+        "qsca": 0.8637126798154888,
+        "wall_time_s": 62.37016509938985
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_gpu_t64",
+      "n": 256,
+      "rep": 2,
+      "backend": "direct_gpu",
+      "threads": 64,
+      "aggregate_order": 21,
+      "process_wall_time_s": 95.7030523000285,
+      "timed_window_s": 61.71696660015732,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.3063749674901256, \"profile_data\": {\"assembly_time\": 0.0, \"h2d_time\": 0.0, \"krylov_iters\": 16, \"merge_gemm_time\": 0.08277630060911179, \"merge_time\": 3.6264311000704765, \"orientation_time\": 0.3304621996358037, \"precompute_merge_time\": 3.542998899705708, \"rhs_time\": 8.737245699390769, \"solve_time\": 40.749493200331926, \"vram_mb\": 0.0}, \"qabs\": 2.273885841084026, \"qext\": 3.1375985208995147, \"qsca\": 0.8637126798154888, \"wall_time_s\": 61.71696660015732}\n",
+      "stderr_tail": "C:\\Python313\\Lib\\site-packages\\cupy\\_environment.py:275: UserWarning: CUDA path could not be detected. Set CUDA_PATH environment variable if CuPy fails to load.\n  warnings.warn(\n",
+      "parsed": {
+        "g": 0.3063749674901256,
+        "profile_data": {
+          "assembly_time": 0.0,
+          "h2d_time": 0.0,
+          "krylov_iters": 16,
+          "merge_gemm_time": 0.08277630060911179,
+          "merge_time": 3.6264311000704765,
+          "orientation_time": 0.3304621996358037,
+          "precompute_merge_time": 3.542998899705708,
+          "rhs_time": 8.737245699390769,
+          "solve_time": 40.749493200331926,
+          "vram_mb": 0.0
+        },
+        "qabs": 2.273885841084026,
+        "qext": 3.1375985208995147,
+        "qsca": 0.8637126798154888,
+        "wall_time_s": 61.71696660015732
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_gpu_dense_t64",
+      "n": 256,
+      "rep": 1,
+      "backend": "direct_gpu_dense",
+      "threads": 64,
+      "aggregate_order": 21,
+      "process_wall_time_s": 121.98100630007684,
+      "timed_window_s": 84.02264089975506,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.30637496749012555, \"profile_data\": {\"assembly_time\": 0.3449538005515933, \"final_residual\": 4.918250186426138e-13, \"h2d_time\": 0.15222780033946037, \"krylov_iters\": 5, \"merge_gemm_time\": 0.08477620035409927, \"merge_time\": 3.8275154000148177, \"orientation_time\": 0.3376219002529979, \"precompute_merge_time\": 3.7420868994668126, \"refinement_iters\": 5, \"rhs_time\": 7.329281000420451, \"solve_time\": 63.84217969980091, \"sp_krylov_iters\": 758, \"used_fallback\": true, \"used_mixed_precision\": true, \"vram_mb\": 900.0}, \"qabs\": 2.2738858410840264, \"qext\": 3.137598520899515, \"qsca\": 0.863712679815489, \"wall_time_s\": 84.02264089975506}\n",
+      "stderr_tail": "C:\\Python313\\Lib\\site-packages\\cupy\\_environment.py:275: UserWarning: CUDA path could not be detected. Set CUDA_PATH environment variable if CuPy fails to load.\n  warnings.warn(\n",
+      "parsed": {
+        "g": 0.30637496749012555,
+        "profile_data": {
+          "assembly_time": 0.3449538005515933,
+          "final_residual": 4.918250186426138e-13,
+          "h2d_time": 0.15222780033946037,
+          "krylov_iters": 5,
+          "merge_gemm_time": 0.08477620035409927,
+          "merge_time": 3.8275154000148177,
+          "orientation_time": 0.3376219002529979,
+          "precompute_merge_time": 3.7420868994668126,
+          "refinement_iters": 5,
+          "rhs_time": 7.329281000420451,
+          "solve_time": 63.84217969980091,
+          "sp_krylov_iters": 758,
+          "used_fallback": true,
+          "used_mixed_precision": true,
+          "vram_mb": 900.0
+        },
+        "qabs": 2.2738858410840264,
+        "qext": 3.137598520899515,
+        "qsca": 0.863712679815489,
+        "wall_time_s": 84.02264089975506
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_gpu_dense_t64",
+      "n": 256,
+      "rep": 2,
+      "backend": "direct_gpu_dense",
+      "threads": 64,
+      "aggregate_order": 21,
+      "process_wall_time_s": 122.79956289939582,
+      "timed_window_s": 84.84043610002846,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.30637496749012555, \"profile_data\": {\"assembly_time\": 0.5329569997265935, \"final_residual\": 4.918250186426138e-13, \"h2d_time\": 0.165400099940598, \"krylov_iters\": 5, \"merge_gemm_time\": 0.08412620052695274, \"merge_time\": 3.831353399902582, \"orientation_time\": 0.32198849972337484, \"precompute_merge_time\": 3.74658440053463, \"refinement_iters\": 5, \"rhs_time\": 7.4275634996593, \"solve_time\": 64.18576349969953, \"sp_krylov_iters\": 758, \"used_fallback\": true, \"used_mixed_precision\": true, \"vram_mb\": 900.0}, \"qabs\": 2.2738858410840264, \"qext\": 3.137598520899515, \"qsca\": 0.863712679815489, \"wall_time_s\": 84.84043610002846}\n",
+      "stderr_tail": "C:\\Python313\\Lib\\site-packages\\cupy\\_environment.py:275: UserWarning: CUDA path could not be detected. Set CUDA_PATH environment variable if CuPy fails to load.\n  warnings.warn(\n",
+      "parsed": {
+        "g": 0.30637496749012555,
+        "profile_data": {
+          "assembly_time": 0.5329569997265935,
+          "final_residual": 4.918250186426138e-13,
+          "h2d_time": 0.165400099940598,
+          "krylov_iters": 5,
+          "merge_gemm_time": 0.08412620052695274,
+          "merge_time": 3.831353399902582,
+          "orientation_time": 0.32198849972337484,
+          "precompute_merge_time": 3.74658440053463,
+          "refinement_iters": 5,
+          "rhs_time": 7.4275634996593,
+          "solve_time": 64.18576349969953,
+          "sp_krylov_iters": 758,
+          "used_fallback": true,
+          "used_mixed_precision": true,
+          "vram_mb": 900.0
+        },
+        "qabs": 2.2738858410840264,
+        "qext": 3.137598520899515,
+        "qsca": 0.863712679815489,
+        "wall_time_s": 84.84043610002846
+      },
+      "status": "success"
+    }
+  ]
+}

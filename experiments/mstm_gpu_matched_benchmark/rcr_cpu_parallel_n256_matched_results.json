@@ -1,0 +1,149 @@
+{
+  "purpose": "same-physical-workstation GPU RCR versus MSTM CPU/MPI benchmark",
+  "parameters": {
+    "aggregate": "frozen sphere-aggregate geometries; see geometry_sources_by_n and geometry_metadata_by_n",
+    "seed": 42,
+    "monomer_radius_nm": 25.0,
+    "wavelength_nm": 550.0,
+    "radius_dimless": 0.28559933214452665,
+    "refractive_index": {
+      "real": 1.95,
+      "imag": 0.79
+    },
+    "monomer_order": 3,
+    "solution_epsilon": "1.d-12",
+    "translation_epsilon": "1.d-12",
+    "random_orientation": true,
+    "calculate_scattering_matrix": true,
+    "aggregate_order_policy": "mstm_estimated",
+    "aggregate_order_overrides": {
+      "256": 21
+    }
+  },
+  "timing_policy": [
+    "Aggregate-coordinate generation and input-deck generation are excluded from timed values.",
+    "MSTM wall time is measured around the WSL2 command invocation after a one-command WSL warm-up; it includes executable startup, input parsing, solve, and output-file writing.",
+    "RCR process/wall time includes native Python subprocess startup plus JIT/GPU warm-up and the physical computation.",
+    "RCR compute-window time excludes the small dummy JIT/GPU warm-up and includes solver construction, aggregate T-matrix construction, and orientation averaging.",
+    "For each N, all solvers use the same frozen sphere-aggregate geometry, monomer radius, wavelength, refractive index, random-orientation output, and tolerance policy recorded here.",
+    "MSTM MPI timings use the OpenMPI rank counts recorded in the environment metadata."
+  ],
+  "environment": {
+    "timestamp_utc": "2026-06-12T06:05:08Z",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "python": "3.13.2",
+    "git_commit": "unavailable",
+    "wsl_distro": "Ubuntu-24.04",
+    "mstm_wsl_binary": "/root/mstm_build/mstm",
+    "mstm_mpi_wsl_binary": "/root/mstm_build_parallel/mstm_parallel",
+    "requested_mpi_procs": [
+      4,
+      8
+    ],
+    "wsl_gfortran": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "wsl_mpifort": "/usr/bin/mpifort",
+    "wsl_mpirun": "/usr/bin/mpirun",
+    "nvidia_smi": "0, NVIDIA GeForce RTX 3090, 24576 MiB"
+  },
+  "summary": {
+    "256": {
+      "rcr_direct_cpu_parallel_t64": {
+        "count": 2,
+        "median_time_s": 436.6246457500383,
+        "min_time_s": 427.82490000035614,
+        "mean_time_s": 436.6246457500383,
+        "stdev_time_s": 12.444719784635549,
+        "median_qext": 3.1375985208995076,
+        "min_qext": 3.1375985208995076,
+        "max_qext": 3.1375985208995076,
+        "failures": 0
+      },
+      "rcr_direct_cpu_parallel_t64_process": {
+        "count": 2,
+        "median_time_s": 474.0544661995955,
+        "min_time_s": 464.9028552994132,
+        "mean_time_s": 474.0544661995955,
+        "stdev_time_s": 12.942332252599225,
+        "median_qext": 3.1375985208995076,
+        "min_qext": 3.1375985208995076,
+        "max_qext": 3.1375985208995076,
+        "failures": 0
+      }
+    }
+  },
+  "aggregate_orders_by_n": {
+    "256": {
+      "rcr_auto": 19,
+      "mstm_estimated_values": [],
+      "used_for_rcr": 21,
+      "policy": "explicit_override"
+    }
+  },
+  "geometry_sources_by_n": {
+    "256": "experiments\\mstm_gpu_matched_benchmark\\frozen_inputs\\mstm_bcca_n256_w550_seed42.inp"
+  },
+  "geometry_metadata_by_n": {
+    "256": {
+      "source_type": "deterministic_doubled_frozen_geometry",
+      "description": "Two translated copies of the frozen N=128 BCCA seed-42 geometry; used only as a frozen N=256 performance stress-test geometry, not as an independently generated BCCA seed-42 realization.",
+      "source_input": "experiments\\mstm_validation\\inputs\\mstm_bcca_n128_w550_seed42.inp",
+      "output_input": "experiments\\mstm_gpu_matched_benchmark\\frozen_inputs\\mstm_bcca_n256_w550_seed42.inp",
+      "source_n": 128,
+      "output_n": 256,
+      "radius_dimless": 0.28559933214452665,
+      "gap_factor": 1.05,
+      "min_pair_distance_dimless": 0.5711986642143904,
+      "min_surface_gap_dimless": -7.466294249525163e-11
+    }
+  },
+  "trials": [
+    {
+      "solver": "rcr_direct_cpu_parallel_t64",
+      "n": 256,
+      "rep": 1,
+      "backend": "direct_cpu_parallel",
+      "threads": 64,
+      "aggregate_order": 21,
+      "process_wall_time_s": 464.9028552994132,
+      "timed_window_s": 427.82490000035614,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.3063749674901303, \"profile_data\": {\"orientation_time\": 0.342930500395596}, \"qabs\": 2.273885841084021, \"qext\": 3.1375985208995076, \"qsca\": 0.8637126798154867, \"wall_time_s\": 427.82490000035614}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.3063749674901303,
+        "profile_data": {
+          "orientation_time": 0.342930500395596
+        },
+        "qabs": 2.273885841084021,
+        "qext": 3.1375985208995076,
+        "qsca": 0.8637126798154867,
+        "wall_time_s": 427.82490000035614
+      },
+      "status": "success"
+    },
+    {
+      "solver": "rcr_direct_cpu_parallel_t64",
+      "n": 256,
+      "rep": 2,
+      "backend": "direct_cpu_parallel",
+      "threads": 64,
+      "aggregate_order": 21,
+      "process_wall_time_s": 483.20607709977776,
+      "timed_window_s": 445.4243914997205,
+      "returncode": 0,
+      "stdout_tail": "RCR_RESULT_JSON:{\"g\": 0.3063749674901303, \"profile_data\": {\"orientation_time\": 0.3216313002631068}, \"qabs\": 2.273885841084021, \"qext\": 3.1375985208995076, \"qsca\": 0.8637126798154867, \"wall_time_s\": 445.4243914997205}\n",
+      "stderr_tail": "",
+      "parsed": {
+        "g": 0.3063749674901303,
+        "profile_data": {
+          "orientation_time": 0.3216313002631068
+        },
+        "qabs": 2.273885841084021,
+        "qext": 3.1375985208995076,
+        "qsca": 0.8637126798154867,
+        "wall_time_s": 445.4243914997205
+      },
+      "status": "success"
+    }
+  ]
+}
