@@ -1,0 +1,10 @@
+name: size_scaling_550nm
+families: [bcca, bpca]
+n_monomers: [8, 16, 32, 64]
+radius_nm: 25.0
+wavelength_nm: 550.0
+refractive_index: [1.95, 0.79]
+monomer_order: 3
+aggregate_order: 6
+angles_deg: 181
+seeds: "0-9"

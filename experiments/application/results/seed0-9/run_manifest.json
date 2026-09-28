@@ -1,0 +1,668 @@
+{
+  "cases": {
+    "bpca_n16_w550_seed42": {
+      "status": "passed",
+      "time_total_s": 36.935051679611206,
+      "timestamp_utc": "2026-09-07T12:11:51Z"
+    },
+    "bpca_n16_w650_seed42": {
+      "status": "passed",
+      "time_total_s": 36.94352650642395,
+      "timestamp_utc": "2026-09-07T12:13:08Z"
+    },
+    "bpca_n16_w450_seed42": {
+      "status": "passed",
+      "time_total_s": 37.79629564285278,
+      "timestamp_utc": "2026-09-07T12:10:08Z"
+    },
+    "bcca_n16_w450_seed42": {
+      "status": "passed",
+      "time_total_s": 37.01461458206177,
+      "timestamp_utc": "2026-09-07T12:05:46Z"
+    },
+    "bcca_n16_w650_seed42": {
+      "status": "passed",
+      "time_total_s": 38.2353310585022,
+      "timestamp_utc": "2026-09-07T12:08:52Z"
+    },
+    "bcca_n16_w550_seed42": {
+      "status": "passed",
+      "time_total_s": 38.02276635169983,
+      "timestamp_utc": "2026-09-07T12:07:02Z"
+    },
+    "bcca_n8_w550_seed42": {
+      "status": "passed",
+      "time_total_s": 35.25569152832031,
+      "timestamp_utc": "2026-09-07T12:24:34Z"
+    },
+    "bpca_n8_w550_seed42": {
+      "status": "passed",
+      "time_total_s": 35.14221382141113,
+      "timestamp_utc": "2026-09-07T12:50:30Z"
+    },
+    "bcca_n32_w550_seed42": {
+      "status": "passed",
+      "time_total_s": 47.006476640701294,
+      "timestamp_utc": "2026-09-07T12:32:07Z"
+    },
+    "bpca_n32_w550_seed42": {
+      "status": "passed",
+      "time_total_s": 42.70220375061035,
+      "timestamp_utc": "2026-09-07T12:57:36Z"
+    },
+    "bcca_n64_w550_seed42": {
+      "status": "passed",
+      "time_total_s": 75.89241123199463,
+      "timestamp_utc": "2026-09-07T12:44:42Z"
+    },
+    "bpca_n64_w550_seed42": {
+      "status": "passed",
+      "time_total_s": 68.84538197517395,
+      "timestamp_utc": "2026-09-07T13:09:09Z"
+    },
+    "bcca_n16_w450_seed2": {
+      "status": "passed",
+      "time_total_s": 39.40385293960571,
+      "timestamp_utc": "2026-09-08T09:46:38Z"
+    },
+    "bcca_n16_w450_seed1": {
+      "status": "passed",
+      "time_total_s": 39.3521363735199,
+      "timestamp_utc": "2026-09-08T09:46:38Z"
+    },
+    "bcca_n16_w450_seed3": {
+      "status": "passed",
+      "time_total_s": 40.1636598110199,
+      "timestamp_utc": "2026-09-08T09:46:39Z"
+    },
+    "bcca_n16_w450_seed0": {
+      "status": "passed",
+      "time_total_s": 39.71264886856079,
+      "timestamp_utc": "2026-09-08T09:46:38Z"
+    },
+    "bcca_n16_w450_seed6": {
+      "status": "passed",
+      "time_total_s": 39.96893119812012,
+      "timestamp_utc": "2026-09-08T09:47:18Z"
+    },
+    "bcca_n16_w450_seed5": {
+      "status": "passed",
+      "time_total_s": 36.822993516922,
+      "timestamp_utc": "2026-09-08T09:47:15Z"
+    },
+    "bcca_n16_w450_seed4": {
+      "status": "passed",
+      "time_total_s": 38.420600175857544,
+      "timestamp_utc": "2026-09-08T09:47:16Z"
+    },
+    "bcca_n16_w450_seed7": {
+      "status": "passed",
+      "time_total_s": 37.20262050628662,
+      "timestamp_utc": "2026-09-08T09:47:16Z"
+    },
+    "bcca_n16_w450_seed9": {
+      "status": "passed",
+      "time_total_s": 36.88464665412903,
+      "timestamp_utc": "2026-09-08T09:47:53Z"
+    },
+    "bcca_n16_w550_seed0": {
+      "status": "passed",
+      "time_total_s": 36.80116081237793,
+      "timestamp_utc": "2026-09-08T09:47:53Z"
+    },
+    "bcca_n16_w450_seed8": {
+      "status": "passed",
+      "time_total_s": 37.42189931869507,
+      "timestamp_utc": "2026-09-08T09:47:52Z"
+    },
+    "bcca_n16_w550_seed1": {
+      "status": "passed",
+      "time_total_s": 38.717673540115356,
+      "timestamp_utc": "2026-09-08T09:47:57Z"
+    },
+    "bcca_n16_w550_seed2": {
+      "status": "passed",
+      "time_total_s": 36.63652777671814,
+      "timestamp_utc": "2026-09-08T09:48:29Z"
+    },
+    "bcca_n16_w550_seed4": {
+      "status": "passed",
+      "time_total_s": 41.05614972114563,
+      "timestamp_utc": "2026-09-08T09:48:34Z"
+    },
+    "bcca_n16_w550_seed3": {
+      "status": "passed",
+      "time_total_s": 37.99640941619873,
+      "timestamp_utc": "2026-09-08T09:48:31Z"
+    },
+    "bcca_n16_w550_seed5": {
+      "status": "passed",
+      "time_total_s": 36.819741010665894,
+      "timestamp_utc": "2026-09-08T09:48:34Z"
+    },
+    "bcca_n16_w550_seed7": {
+      "status": "passed",
+      "time_total_s": 36.97113537788391,
+      "timestamp_utc": "2026-09-08T09:49:08Z"
+    },
+    "bcca_n16_w550_seed8": {
+      "status": "passed",
+      "time_total_s": 38.5812771320343,
+      "timestamp_utc": "2026-09-08T09:49:12Z"
+    },
+    "bcca_n16_w550_seed6": {
+      "status": "passed",
+      "time_total_s": 39.5527241230011,
+      "timestamp_utc": "2026-09-08T09:49:08Z"
+    },
+    "bcca_n16_w550_seed9": {
+      "status": "passed",
+      "time_total_s": 36.81721830368042,
+      "timestamp_utc": "2026-09-08T09:49:11Z"
+    },
+    "bcca_n16_w650_seed0": {
+      "status": "passed",
+      "time_total_s": 38.89459824562073,
+      "timestamp_utc": "2026-09-08T09:49:47Z"
+    },
+    "bcca_n16_w650_seed1": {
+      "status": "passed",
+      "time_total_s": 37.89906024932861,
+      "timestamp_utc": "2026-09-08T09:49:46Z"
+    },
+    "bcca_n16_w650_seed2": {
+      "status": "passed",
+      "time_total_s": 39.030431032180786,
+      "timestamp_utc": "2026-09-08T09:49:50Z"
+    },
+    "bcca_n16_w650_seed3": {
+      "status": "passed",
+      "time_total_s": 39.28869962692261,
+      "timestamp_utc": "2026-09-08T09:49:52Z"
+    },
+    "bcca_n16_w650_seed4": {
+      "status": "passed",
+      "time_total_s": 38.669079303741455,
+      "timestamp_utc": "2026-09-08T09:50:25Z"
+    },
+    "bcca_n16_w650_seed6": {
+      "status": "passed",
+      "time_total_s": 40.810537338256836,
+      "timestamp_utc": "2026-09-08T09:50:31Z"
+    },
+    "bcca_n16_w650_seed5": {
+      "status": "passed",
+      "time_total_s": 36.985451221466064,
+      "timestamp_utc": "2026-09-08T09:50:24Z"
+    },
+    "bcca_n16_w650_seed7": {
+      "status": "passed",
+      "time_total_s": 36.874348402023315,
+      "timestamp_utc": "2026-09-08T09:50:28Z"
+    },
+    "bcca_n16_w650_seed8": {
+      "status": "passed",
+      "time_total_s": 39.63555431365967,
+      "timestamp_utc": "2026-09-08T09:51:03Z"
+    },
+    "bcca_n16_w650_seed9": {
+      "status": "passed",
+      "time_total_s": 37.53406500816345,
+      "timestamp_utc": "2026-09-08T09:51:02Z"
+    },
+    "bpca_n16_w450_seed0": {
+      "status": "passed",
+      "time_total_s": 36.676846504211426,
+      "timestamp_utc": "2026-09-08T09:51:05Z"
+    },
+    "bpca_n16_w450_seed1": {
+      "status": "passed",
+      "time_total_s": 36.14298629760742,
+      "timestamp_utc": "2026-09-08T09:51:07Z"
+    },
+    "bpca_n16_w450_seed2": {
+      "status": "passed",
+      "time_total_s": 36.10974311828613,
+      "timestamp_utc": "2026-09-08T09:51:39Z"
+    },
+    "bpca_n16_w450_seed4": {
+      "status": "passed",
+      "time_total_s": 37.22852849960327,
+      "timestamp_utc": "2026-09-08T09:51:42Z"
+    },
+    "bpca_n16_w450_seed5": {
+      "status": "passed",
+      "time_total_s": 36.05009126663208,
+      "timestamp_utc": "2026-09-08T09:51:43Z"
+    },
+    "bpca_n16_w450_seed3": {
+      "status": "passed",
+      "time_total_s": 36.14065885543823,
+      "timestamp_utc": "2026-09-08T09:51:39Z"
+    },
+    "bpca_n16_w450_seed6": {
+      "status": "passed",
+      "time_total_s": 36.27312421798706,
+      "timestamp_utc": "2026-09-08T09:52:15Z"
+    },
+    "bpca_n16_w450_seed7": {
+      "status": "passed",
+      "time_total_s": 35.6587917804718,
+      "timestamp_utc": "2026-09-08T09:52:15Z"
+    },
+    "bpca_n16_w450_seed8": {
+      "status": "passed",
+      "time_total_s": 36.0839684009552,
+      "timestamp_utc": "2026-09-08T09:52:18Z"
+    },
+    "bpca_n16_w450_seed9": {
+      "status": "passed",
+      "time_total_s": 36.13156485557556,
+      "timestamp_utc": "2026-09-08T09:52:19Z"
+    },
+    "bpca_n16_w550_seed1": {
+      "status": "passed",
+      "time_total_s": 37.92938756942749,
+      "timestamp_utc": "2026-09-08T09:52:53Z"
+    },
+    "bpca_n16_w550_seed2": {
+      "status": "passed",
+      "time_total_s": 37.69181513786316,
+      "timestamp_utc": "2026-09-08T09:52:56Z"
+    },
+    "bpca_n16_w550_seed3": {
+      "status": "passed",
+      "time_total_s": 36.54656720161438,
+      "timestamp_utc": "2026-09-08T09:52:56Z"
+    },
+    "bpca_n16_w550_seed0": {
+      "status": "passed",
+      "time_total_s": 37.30637502670288,
+      "timestamp_utc": "2026-09-08T09:52:52Z"
+    },
+    "bpca_n16_w550_seed4": {
+      "status": "passed",
+      "time_total_s": 35.85383749008179,
+      "timestamp_utc": "2026-09-08T09:53:28Z"
+    },
+    "bpca_n16_w550_seed5": {
+      "status": "passed",
+      "time_total_s": 38.41906499862671,
+      "timestamp_utc": "2026-09-08T09:53:31Z"
+    },
+    "bpca_n16_w550_seed6": {
+      "status": "passed",
+      "time_total_s": 36.05488348007202,
+      "timestamp_utc": "2026-09-08T09:53:32Z"
+    },
+    "bpca_n16_w550_seed7": {
+      "status": "passed",
+      "time_total_s": 35.26151251792908,
+      "timestamp_utc": "2026-09-08T09:53:31Z"
+    },
+    "bpca_n16_w550_seed8": {
+      "status": "passed",
+      "time_total_s": 36.08893418312073,
+      "timestamp_utc": "2026-09-08T09:54:04Z"
+    },
+    "bpca_n16_w550_seed9": {
+      "status": "passed",
+      "time_total_s": 35.85428524017334,
+      "timestamp_utc": "2026-09-08T09:54:07Z"
+    },
+    "bpca_n16_w650_seed0": {
+      "status": "passed",
+      "time_total_s": 36.30404877662659,
+      "timestamp_utc": "2026-09-08T09:54:08Z"
+    },
+    "bpca_n16_w650_seed1": {
+      "status": "passed",
+      "time_total_s": 37.253485918045044,
+      "timestamp_utc": "2026-09-08T09:54:09Z"
+    },
+    "bpca_n16_w650_seed5": {
+      "status": "passed",
+      "time_total_s": 35.64359521865845,
+      "timestamp_utc": "2026-09-08T09:54:45Z"
+    },
+    "bpca_n16_w650_seed3": {
+      "status": "passed",
+      "time_total_s": 36.371277809143066,
+      "timestamp_utc": "2026-09-08T09:54:44Z"
+    },
+    "bpca_n16_w650_seed2": {
+      "status": "passed",
+      "time_total_s": 37.17893147468567,
+      "timestamp_utc": "2026-09-08T09:54:41Z"
+    },
+    "bpca_n16_w650_seed4": {
+      "status": "passed",
+      "time_total_s": 38.0129075050354,
+      "timestamp_utc": "2026-09-08T09:54:46Z"
+    },
+    "bpca_n16_w650_seed6": {
+      "status": "passed",
+      "time_total_s": 35.976157665252686,
+      "timestamp_utc": "2026-09-08T09:55:17Z"
+    },
+    "bpca_n16_w650_seed8": {
+      "status": "passed",
+      "time_total_s": 36.35656809806824,
+      "timestamp_utc": "2026-09-08T09:55:21Z"
+    },
+    "bpca_n16_w650_seed9": {
+      "status": "passed",
+      "time_total_s": 36.36863565444946,
+      "timestamp_utc": "2026-09-08T09:55:22Z"
+    },
+    "bpca_n16_w650_seed7": {
+      "status": "passed",
+      "time_total_s": 35.41416335105896,
+      "timestamp_utc": "2026-09-08T09:55:19Z"
+    },
+    "bcca_n8_w550_seed1": {
+      "status": "passed",
+      "time_total_s": 35.53074073791504,
+      "timestamp_utc": "2026-09-08T09:56:54Z"
+    },
+    "bcca_n8_w550_seed2": {
+      "status": "passed",
+      "time_total_s": 35.57173562049866,
+      "timestamp_utc": "2026-09-08T09:56:54Z"
+    },
+    "bcca_n8_w550_seed0": {
+      "status": "passed",
+      "time_total_s": 35.88665318489075,
+      "timestamp_utc": "2026-09-08T09:56:54Z"
+    },
+    "bcca_n8_w550_seed3": {
+      "status": "passed",
+      "time_total_s": 36.73808264732361,
+      "timestamp_utc": "2026-09-08T09:56:55Z"
+    },
+    "bcca_n8_w550_seed6": {
+      "status": "passed",
+      "time_total_s": 34.86945414543152,
+      "timestamp_utc": "2026-09-08T09:57:29Z"
+    },
+    "bcca_n8_w550_seed7": {
+      "status": "passed",
+      "time_total_s": 34.30223536491394,
+      "timestamp_utc": "2026-09-08T09:57:29Z"
+    },
+    "bcca_n8_w550_seed5": {
+      "status": "passed",
+      "time_total_s": 35.727391481399536,
+      "timestamp_utc": "2026-09-08T09:57:29Z"
+    },
+    "bcca_n8_w550_seed4": {
+      "status": "passed",
+      "time_total_s": 37.43625521659851,
+      "timestamp_utc": "2026-09-08T09:57:31Z"
+    },
+    "bcca_n8_w550_seed9": {
+      "status": "passed",
+      "time_total_s": 34.750460386276245,
+      "timestamp_utc": "2026-09-08T09:58:04Z"
+    },
+    "bcca_n8_w550_seed8": {
+      "status": "passed",
+      "time_total_s": 35.61049294471741,
+      "timestamp_utc": "2026-09-08T09:58:04Z"
+    },
+    "bcca_n32_w550_seed0": {
+      "status": "passed",
+      "time_total_s": 46.461732387542725,
+      "timestamp_utc": "2026-09-08T09:58:16Z"
+    },
+    "bcca_n32_w550_seed1": {
+      "status": "passed",
+      "time_total_s": 45.74674153327942,
+      "timestamp_utc": "2026-09-08T09:58:17Z"
+    },
+    "bcca_n32_w550_seed3": {
+      "status": "passed",
+      "time_total_s": 45.964723110198975,
+      "timestamp_utc": "2026-09-08T09:58:50Z"
+    },
+    "bcca_n32_w550_seed2": {
+      "status": "passed",
+      "time_total_s": 48.263877868652344,
+      "timestamp_utc": "2026-09-08T09:58:52Z"
+    },
+    "bcca_n32_w550_seed5": {
+      "status": "passed",
+      "time_total_s": 45.23947191238403,
+      "timestamp_utc": "2026-09-08T09:59:02Z"
+    },
+    "bcca_n32_w550_seed4": {
+      "status": "passed",
+      "time_total_s": 46.4553542137146,
+      "timestamp_utc": "2026-09-08T09:59:02Z"
+    },
+    "bcca_n32_w550_seed6": {
+      "status": "passed",
+      "time_total_s": 44.15911507606506,
+      "timestamp_utc": "2026-09-08T09:59:35Z"
+    },
+    "bcca_n32_w550_seed7": {
+      "status": "passed",
+      "time_total_s": 43.577913761138916,
+      "timestamp_utc": "2026-09-08T09:59:36Z"
+    },
+    "bcca_n32_w550_seed9": {
+      "status": "passed",
+      "time_total_s": 46.85994482040405,
+      "timestamp_utc": "2026-09-08T09:59:49Z"
+    },
+    "bcca_n32_w550_seed8": {
+      "status": "passed",
+      "time_total_s": 49.6077766418457,
+      "timestamp_utc": "2026-09-08T09:59:52Z"
+    },
+    "bcca_n64_w550_seed1": {
+      "status": "passed",
+      "time_total_s": 171.9492003917694,
+      "timestamp_utc": "2026-09-08T10:25:44Z"
+    },
+    "bcca_n64_w550_seed0": {
+      "status": "passed",
+      "time_total_s": 76.05748462677002,
+      "timestamp_utc": "2026-09-08T10:00:51Z"
+    },
+    "bcca_n64_w550_seed3": {
+      "status": "passed",
+      "time_total_s": 74.2379162311554,
+      "timestamp_utc": "2026-09-08T10:01:06Z"
+    },
+    "bcca_n64_w550_seed4": {
+      "status": "passed",
+      "time_total_s": 76.74560689926147,
+      "timestamp_utc": "2026-09-08T10:01:11Z"
+    },
+    "bcca_n64_w550_seed2": {
+      "status": "passed",
+      "time_total_s": 86.37722373008728,
+      "timestamp_utc": "2026-09-08T10:01:16Z"
+    },
+    "bcca_n64_w550_seed5": {
+      "status": "passed",
+      "time_total_s": 69.03911018371582,
+      "timestamp_utc": "2026-09-08T10:02:00Z"
+    },
+    "bcca_n64_w550_seed6": {
+      "status": "passed",
+      "time_total_s": 74.77782368659973,
+      "timestamp_utc": "2026-09-08T10:02:21Z"
+    },
+    "bcca_n64_w550_seed8": {
+      "status": "passed",
+      "time_total_s": 67.15085029602051,
+      "timestamp_utc": "2026-09-08T10:02:23Z"
+    },
+    "bcca_n64_w550_seed7": {
+      "status": "passed",
+      "time_total_s": 77.63752555847168,
+      "timestamp_utc": "2026-09-08T10:02:29Z"
+    },
+    "bpca_n8_w550_seed0": {
+      "status": "passed",
+      "time_total_s": 34.12652540206909,
+      "timestamp_utc": "2026-09-08T10:02:55Z"
+    },
+    "bpca_n8_w550_seed1": {
+      "status": "passed",
+      "time_total_s": 35.09104919433594,
+      "timestamp_utc": "2026-09-08T10:02:58Z"
+    },
+    "bpca_n8_w550_seed2": {
+      "status": "passed",
+      "time_total_s": 34.17962288856506,
+      "timestamp_utc": "2026-09-08T10:03:03Z"
+    },
+    "bcca_n64_w550_seed9": {
+      "status": "passed",
+      "time_total_s": 79.50590562820435,
+      "timestamp_utc": "2026-09-08T10:03:19Z"
+    },
+    "bpca_n8_w550_seed3": {
+      "status": "passed",
+      "time_total_s": 34.338968992233276,
+      "timestamp_utc": "2026-09-08T10:03:29Z"
+    },
+    "bpca_n8_w550_seed4": {
+      "status": "passed",
+      "time_total_s": 34.675204038619995,
+      "timestamp_utc": "2026-09-08T10:03:32Z"
+    },
+    "bpca_n8_w550_seed5": {
+      "status": "passed",
+      "time_total_s": 35.61594486236572,
+      "timestamp_utc": "2026-09-08T10:03:38Z"
+    },
+    "bpca_n8_w550_seed6": {
+      "status": "passed",
+      "time_total_s": 35.3462815284729,
+      "timestamp_utc": "2026-09-08T10:03:55Z"
+    },
+    "bpca_n8_w550_seed7": {
+      "status": "passed",
+      "time_total_s": 34.18534517288208,
+      "timestamp_utc": "2026-09-08T10:04:03Z"
+    },
+    "bpca_n8_w550_seed8": {
+      "status": "passed",
+      "time_total_s": 34.891844034194946,
+      "timestamp_utc": "2026-09-08T10:04:07Z"
+    },
+    "bpca_n8_w550_seed9": {
+      "status": "passed",
+      "time_total_s": 35.29150080680847,
+      "timestamp_utc": "2026-09-08T10:04:14Z"
+    },
+    "bpca_n32_w550_seed0": {
+      "status": "passed",
+      "time_total_s": 40.99539518356323,
+      "timestamp_utc": "2026-09-08T10:04:36Z"
+    },
+    "bpca_n32_w550_seed1": {
+      "status": "passed",
+      "time_total_s": 44.542152643203735,
+      "timestamp_utc": "2026-09-08T10:04:48Z"
+    },
+    "bpca_n32_w550_seed2": {
+      "status": "passed",
+      "time_total_s": 44.05122685432434,
+      "timestamp_utc": "2026-09-08T10:04:51Z"
+    },
+    "bpca_n32_w550_seed3": {
+      "status": "passed",
+      "time_total_s": 42.469523668289185,
+      "timestamp_utc": "2026-09-08T10:04:56Z"
+    },
+    "bpca_n32_w550_seed4": {
+      "status": "passed",
+      "time_total_s": 43.43945550918579,
+      "timestamp_utc": "2026-09-08T10:05:19Z"
+    },
+    "bpca_n32_w550_seed5": {
+      "status": "passed",
+      "time_total_s": 42.41892886161804,
+      "timestamp_utc": "2026-09-08T10:05:30Z"
+    },
+    "bpca_n32_w550_seed6": {
+      "status": "passed",
+      "time_total_s": 41.19234037399292,
+      "timestamp_utc": "2026-09-08T10:05:33Z"
+    },
+    "bpca_n32_w550_seed7": {
+      "status": "passed",
+      "time_total_s": 42.93535614013672,
+      "timestamp_utc": "2026-09-08T10:05:39Z"
+    },
+    "bpca_n32_w550_seed8": {
+      "status": "passed",
+      "time_total_s": 46.07458853721619,
+      "timestamp_utc": "2026-09-08T10:06:05Z"
+    },
+    "bpca_n32_w550_seed9": {
+      "status": "passed",
+      "time_total_s": 45.648797273635864,
+      "timestamp_utc": "2026-09-08T10:06:16Z"
+    },
+    "bpca_n64_w550_seed0": {
+      "status": "passed",
+      "time_total_s": 70.85083961486816,
+      "timestamp_utc": "2026-09-08T10:06:43Z"
+    },
+    "bpca_n64_w550_seed1": {
+      "status": "passed",
+      "time_total_s": 65.01485872268677,
+      "timestamp_utc": "2026-09-08T10:06:44Z"
+    },
+    "bpca_n64_w550_seed2": {
+      "status": "passed",
+      "time_total_s": 67.46470475196838,
+      "timestamp_utc": "2026-09-08T10:07:13Z"
+    },
+    "bpca_n64_w550_seed3": {
+      "status": "passed",
+      "time_total_s": 68.70631957054138,
+      "timestamp_utc": "2026-09-08T10:07:25Z"
+    },
+    "bpca_n64_w550_seed5": {
+      "status": "passed",
+      "time_total_s": 60.01887083053589,
+      "timestamp_utc": "2026-09-08T10:07:44Z"
+    },
+    "bpca_n64_w550_seed4": {
+      "status": "passed",
+      "time_total_s": 62.00913119316101,
+      "timestamp_utc": "2026-09-08T10:07:45Z"
+    },
+    "bpca_n64_w550_seed6": {
+      "status": "passed",
+      "time_total_s": 65.0404782295227,
+      "timestamp_utc": "2026-09-08T10:08:18Z"
+    },
+    "bpca_n64_w550_seed7": {
+      "status": "passed",
+      "time_total_s": 67.9439640045166,
+      "timestamp_utc": "2026-09-08T10:08:33Z"
+    },
+    "bpca_n64_w550_seed8": {
+      "status": "passed",
+      "time_total_s": 63.913556814193726,
+      "timestamp_utc": "2026-09-08T10:08:48Z"
+    },
+    "bpca_n64_w550_seed9": {
+      "status": "passed",
+      "time_total_s": 70.20815372467041,
+      "timestamp_utc": "2026-09-08T10:08:56Z"
+    }
+  },
+  "run_timestamp_utc": "2026-09-08T10:22:52Z",
+  "workers": 1,
+  "threads_per_case": 24,
+  "total_wall_clock_time_s": 171.95371294021606
+}

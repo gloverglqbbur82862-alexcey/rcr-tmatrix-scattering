@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter and tooling
+.ipynb_checkpoints/
+.python-version
+
+# Numba/CuPy/GPU caches
+.numba_cache/
+.cupy/
+*.cubin
+*.ptx
+
+# Generated experiment outputs
+experiments/**/results/*.json
+experiments/**/outputs/
+experiments/**/build_*/
+figures/generated/*
+data/geometries/*.npz
+data/geometries/*.json
+data/results/generated/
+
+# Keep the frozen seed-0--9 evidence and manifests tracked.
+!experiments/application/results/seed0-9/
+!experiments/application/results/seed0-9/*.json
+!experiments/application/results/seed0-9/README.md
+!data/results/
+!data/results/**/*.json
+!data/results/**/*.csv
+!data/results/**/*.md
+
+# Local machine and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Native build products
+external/mstm/build_mstm_parallel/
+*.o
+*.mod
+*.exe

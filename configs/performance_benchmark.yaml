@@ -1,0 +1,10 @@
+name: performance_benchmark
+families: [bcca]
+n_monomers: [64, 128, 256]
+radius_nm: 25.0
+wavelength_nm: 550.0
+refractive_index: [1.95, 0.79]
+monomer_order: 3
+aggregate_order: 6
+seed: 42
+backend: direct_gpu

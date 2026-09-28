@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+title: "RCR T-Matrix Scattering"
+message: "If you use this software or data, please cite the associated manuscript and this repository."
+type: software
+abstract: >-
+  Matrix-free rotation-coaxial-rotation T-matrix calculations for light
+  scattering by sphere aggregates, including analytical random-orientation
+  averaging and reproducibility artifacts.
+version: 0.1.0
+date-released: 2026-09-28
+license: MIT
+repository-code: "https://github.com/gloverglqbbur82862-alexcey/rcr-tmatrix-scattering"
+keywords:
+  - T-matrix
+  - light scattering
+  - sphere aggregates
+  - RCR translation
+  - Mueller matrix
+  - GPU acceleration
+authors:
+  - given-names: "Jingjia"
+    family-names: "Wu"
+  - given-names: "Yuheng"
+    family-names: "Zhang"
+  - given-names: "Ping"
+    family-names: "Zhu"
+  - given-names: "Huizeng"
+    family-names: "Liu"
+  - given-names: "Guanglang"
+    family-names: "Xu"
+
+contact:
+  - given-names: "Guanglang"
+    family-names: "Xu"
+    affiliation: "Shenzhen University"
+    email: "gl.xu@szu.edu.cn"
+preferred-citation:
+  type: article
+  title: "Matrix-free GPU-accelerated RCR T-matrix method for light scattering by sphere aggregates"
+  authors:
+    - family-names: "Wu"
+      given-names: "Jingjia"
+
+    - family-names: "Zhang"
+      given-names: "Yuheng"
+
+    - family-names: "Zhu"
+      given-names: "Ping"
+
+    - family-names: "Liu"
+      given-names: "Huizeng"
+
+    - family-names: "Xu"
+      given-names: "Guanglang"
+  year: 2026
